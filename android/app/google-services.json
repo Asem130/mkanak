@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "689140004802",
+    "project_id": "mkanak-9a474",
+    "storage_bucket": "mkanak-9a474.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689140004802:android:bfcf45ca935da90500085b",
+        "android_client_info": {
+          "package_name": "com.example.mkanak"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnPjhSgpYzcEiJfB3XZ0RaHCvvQkU3zSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
