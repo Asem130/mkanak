@@ -106,7 +106,6 @@ class PopularShimmperLoading extends StatelessWidget {
                               ),
                             ),
                           ),
-                          
                         ],
                       ),
                     ],

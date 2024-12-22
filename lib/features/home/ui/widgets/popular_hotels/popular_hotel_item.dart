@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mkanak/core/helpers/space_vector.dart';
 import 'package:mkanak/core/themes/color_manger.dart';
-import 'package:mkanak/features/home/data/models/hotels_response_model.dart';
+import 'package:mkanak/features/home/data/models/hotels/hotels_response_model.dart';
 
 class PopularHotelItem extends StatelessWidget {
   const PopularHotelItem({

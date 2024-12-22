@@ -3,7 +3,7 @@ part 'hotels_response_model.g.dart';
 
 @JsonSerializable()
 class HotelsResponseModel {
-  final List<Documents>? documents;
+  final List<HotelsDocuments>? documents;
   factory HotelsResponseModel.fromJson(json) {
     return _$HotelsResponseModelFromJson(json);
   }
@@ -12,12 +12,12 @@ class HotelsResponseModel {
 }
 
 @JsonSerializable()
-class Documents {
+class HotelsDocuments {
   @JsonKey(name: 'fields')
   final HotelsData? hotelsData;
-  Documents(this.hotelsData);
-  factory Documents.fromJson(json) {
-    return _$DocumentsFromJson(json);
+  HotelsDocuments(this.hotelsData);
+  factory HotelsDocuments.fromJson(json) {
+    return _$HotelsDocumentsFromJson(json);
   }
 }
 

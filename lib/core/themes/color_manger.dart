@@ -8,7 +8,7 @@ class ColorsManager {
   static Color warmOrange = const Color(0xffFFB28A);
   static Color lightGrey = const Color(0xff9E9E9E);
   //accent
-  static Color gold = const Color(0xffFFD700);
+  static Color gold = const Color(0xffFFC107);
   static Color orange = const Color(0xffFFD6C6); // color with 80% opacity
   static Color lightBeige = const Color(0xffFFF7F4);
   static Color mutedBrown = const Color(0xff8B5E55);

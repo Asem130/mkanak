@@ -5,10 +5,10 @@ import 'package:mkanak/core/helpers/space_vector.dart';
 import 'package:mkanak/core/themes/color_manger.dart';
 import 'package:mkanak/features/home/ui/widgets/discover_listview.dart';
 import 'package:mkanak/features/home/ui/widgets/discover_row.dart';
-import 'package:mkanak/features/home/ui/widgets/home_carousal_slider.dart';
+import 'package:mkanak/features/home/ui/widgets/home_boosters/home_carousal_slider.dart';
+import 'package:mkanak/features/home/ui/widgets/home_boosters/home_carousal_slider_bloc_builder.dart';
 import 'package:mkanak/features/home/ui/widgets/popular_hotels/most_popular_row.dart';
 import 'package:mkanak/features/home/ui/widgets/popular_hotels/popular_bloc_builder.dart';
-import 'package:mkanak/features/home/ui/widgets/popular_hotels/popular_hotels_listview.dart';
 import 'package:mkanak/features/home/ui/widgets/sliver_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -27,11 +27,10 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: ColorsManager.white,
       body: SafeArea(
         child: Padding(
-          padding:
-              EdgeInsets.only(left: 12.w, right: 12.w, top: 4.h, bottom: 0.h),
+          padding: EdgeInsets.only(left: 12.w, right: 18.w, bottom: 0.h),
           child: CustomScrollView(slivers: [
             HomeSliverAppBar(),
-            HomeCarouselSlider(),
+            HomeCarousalSliderBlocBuilder(),
             MostPopularRow(),
             SliverToBoxAdapter(child: verticalSpace(10)),
             SliverToBoxAdapter(child: PopularHotelsBlocBuilder()),

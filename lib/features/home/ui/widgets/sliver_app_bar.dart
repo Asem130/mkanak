@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:mkanak/core/themes/color_manger.dart';
 import 'package:mkanak/features/home/ui/widgets/home_search.dart';
 
@@ -10,19 +9,20 @@ class HomeSliverAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
-      expandedHeight: 150.h,
+      clipBehavior: Clip.none,
+      expandedHeight: 200.h,
       pinned: true,
       stretch: false,
       backgroundColor: ColorsManager.white,
       flexibleSpace: FlexibleSpaceBar(
-        expandedTitleScale: 1.2,
+        titlePadding: EdgeInsets.symmetric(vertical: 8.h),
+        expandedTitleScale: 1.1,
         background: Padding(
-          padding: EdgeInsets.only(bottom: 30.h),
-          child: SvgPicture.asset(
-            'assets/svg/logogsaddsad.svg',
-            width: 100
-            ,
-            height: 100,
+          padding:  EdgeInsets.only(bottom: 40.0.h),
+          child: Image.asset(
+            'assets/images/2.png',
+            width: 180,
+            height:200,
           ),
         ),
         centerTitle: true,

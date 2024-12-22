@@ -8,7 +8,9 @@ part of 'hotels_response_model.dart';
 
 HotelsResponseModel _$HotelsResponseModelFromJson(Map<String, dynamic> json) =>
     HotelsResponseModel(
-      (json['documents'] as List<dynamic>?)?.map(Documents.fromJson).toList(),
+      (json['documents'] as List<dynamic>?)
+          ?.map(HotelsDocuments.fromJson)
+          .toList(),
     );
 
 Map<String, dynamic> _$HotelsResponseModelToJson(
@@ -17,11 +19,13 @@ Map<String, dynamic> _$HotelsResponseModelToJson(
       'documents': instance.documents,
     };
 
-Documents _$DocumentsFromJson(Map<String, dynamic> json) => Documents(
+HotelsDocuments _$HotelsDocumentsFromJson(Map<String, dynamic> json) =>
+    HotelsDocuments(
       json['fields'] == null ? null : HotelsData.fromJson(json['fields']),
     );
 
-Map<String, dynamic> _$DocumentsToJson(Documents instance) => <String, dynamic>{
+Map<String, dynamic> _$HotelsDocumentsToJson(HotelsDocuments instance) =>
+    <String, dynamic>{
       'fields': instance.hotelsData,
     };
 
