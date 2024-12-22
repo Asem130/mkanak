@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mkanak/core/themes/color_manger.dart';
-import '../../../../core/widgets/crousal_slider.dart';
+import 'package:mkanak/features/home/ui/widgets/crousal_slider.dart';
 
 class HomeCarouselSlider extends StatelessWidget {
   const HomeCarouselSlider({super.key});

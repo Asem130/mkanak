@@ -24,22 +24,24 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorsManager.lightGrey,
-      body: Padding(
-        padding:
-            EdgeInsets.only(left: 12.w, right: 12.w, top: 4.h, bottom: 0.h),
-        child: CustomScrollView(slivers: [
-          HomeSliverAppBar(),
-          HomeCarouselSlider(),
-          MostPopularRow(),
-          SliverToBoxAdapter(child: verticalSpace(10)),
-          SliverToBoxAdapter(child: PopularHotelsBlocBuilder()),
-          SliverToBoxAdapter(child: verticalSpace(15)),
-          DiscoverRow(),
-          SliverToBoxAdapter(child: verticalSpace(15)),
-          DiscoverListView(),
-          SliverToBoxAdapter(child: verticalSpace(15)),
-        ]),
+      backgroundColor: ColorsManager.white,
+      body: SafeArea(
+        child: Padding(
+          padding:
+              EdgeInsets.only(left: 12.w, right: 12.w, top: 4.h, bottom: 0.h),
+          child: CustomScrollView(slivers: [
+            HomeSliverAppBar(),
+            HomeCarouselSlider(),
+            MostPopularRow(),
+            SliverToBoxAdapter(child: verticalSpace(10)),
+            SliverToBoxAdapter(child: PopularHotelsBlocBuilder()),
+            SliverToBoxAdapter(child: verticalSpace(15)),
+            DiscoverRow(),
+            SliverToBoxAdapter(child: verticalSpace(15)),
+            DiscoverListView(),
+            SliverToBoxAdapter(child: verticalSpace(15)),
+          ]),
+        ),
       ),
     );
   }

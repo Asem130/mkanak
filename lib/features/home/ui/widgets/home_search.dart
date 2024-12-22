@@ -27,7 +27,7 @@ class HomeSearch extends StatelessWidget {
             children: [
               Text('Search for hotel',
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        color: ColorsManager.grey2,
+                        color: ColorsManager.lightGrey,
                       )),
               const Spacer(),
               Icon(

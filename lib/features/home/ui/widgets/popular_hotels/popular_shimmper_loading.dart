@@ -21,7 +21,7 @@ class PopularShimmperLoading extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Shimmer.fromColors(
-                baseColor: ColorsManager.primarySkyBlue.withValues(
+                baseColor: ColorsManager.primaryAccent.withValues(
                   alpha: 0.1,
                 ),
                 highlightColor: Colors.white,
@@ -46,7 +46,7 @@ class PopularShimmperLoading extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Shimmer.fromColors(
-                        baseColor: ColorsManager.primarySkyBlue.withValues(
+                        baseColor: ColorsManager.primaryAccent.withValues(
                           alpha: 0.1,
                         ),
                         highlightColor: Colors.white,
@@ -54,14 +54,14 @@ class PopularShimmperLoading extends StatelessWidget {
                           height: 12.h,
                           width: 100.w,
                           decoration: BoxDecoration(
-                            color: ColorsManager.primarySkyBlue,
+                            color: ColorsManager.primaryAccent,
                             borderRadius: BorderRadius.circular(12),
                           ),
                         ),
                       ),
                       verticalSpace(4),
                       Shimmer.fromColors(
-                        baseColor: ColorsManager.primarySkyBlue.withValues(
+                        baseColor: ColorsManager.primaryAccent.withValues(
                           alpha: 0.1,
                         ),
                         highlightColor: Colors.white,
@@ -69,14 +69,14 @@ class PopularShimmperLoading extends StatelessWidget {
                           height: 12.h,
                           width: 80.w,
                           decoration: BoxDecoration(
-                            color: ColorsManager.primarySkyBlue,
+                            color: ColorsManager.primaryAccent,
                             borderRadius: BorderRadius.circular(12),
                           ),
                         ),
                       ),
                       verticalSpace(4),
                       Shimmer.fromColors(
-                        baseColor: ColorsManager.primarySkyBlue.withValues(
+                        baseColor: ColorsManager.primaryAccent.withValues(
                           alpha: 0.1,
                         ),
                         highlightColor: Colors.white,
@@ -84,25 +84,30 @@ class PopularShimmperLoading extends StatelessWidget {
                           height: 10.h,
                           width: 50.w,
                           decoration: BoxDecoration(
-                            color: ColorsManager.primarySkyBlue,
+                            color: ColorsManager.primaryAccent,
                             borderRadius: BorderRadius.circular(12),
                           ),
                         ),
                       ),
                       verticalSpace(4),
-                      Shimmer.fromColors(
-                        baseColor: ColorsManager.primarySkyBlue.withValues(
-                          alpha: 0.1,
-                        ),
-                        highlightColor: Colors.white,
-                        child: Container(
-                          height: 10.h,
-                          width: 30.w,
-                          decoration: BoxDecoration(
-                            color: ColorsManager.primarySkyBlue,
-                            borderRadius: BorderRadius.circular(12),
+                      Row(
+                        children: [
+                          Shimmer.fromColors(
+                            baseColor: ColorsManager.primaryAccent.withValues(
+                              alpha: 0.1,
+                            ),
+                            highlightColor: Colors.white,
+                            child: Container(
+                              height: 10.h,
+                              width: 50.w,
+                              decoration: BoxDecoration(
+                                color: ColorsManager.primaryAccent,
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                            ),
                           ),
-                        ),
+                          
+                        ],
                       ),
                     ],
                   ),

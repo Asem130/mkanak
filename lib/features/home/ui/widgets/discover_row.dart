@@ -12,13 +12,14 @@ class DiscoverRow extends StatelessWidget {
           Text(
             'Discover',
             style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                  color: ColorsManager.primarytealBlue,
+                  color: ColorsManager.mutedBrown,
+                  fontFamily: 'Popins',
                 ),
           ),
           const Spacer(),
           IconButton(
             icon: const Icon(Icons.arrow_forward_ios),
-            color: ColorsManager.seconPrimary,
+            color: ColorsManager.mutedBrown,
             onPressed: () {},
           )
         ],

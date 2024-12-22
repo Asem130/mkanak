@@ -11,14 +11,15 @@ class MostPopularRow extends StatelessWidget {
         children: [
           Text(
             'Most Popular',
-            style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                  color: ColorsManager.primarytealBlue,
-                ),
+            style: Theme.of(context)
+                .textTheme
+                .headlineLarge!
+                .copyWith(color: ColorsManager.mutedBrown, fontSize: 28,fontFamily: 'SourceSans3',),
           ),
           const Spacer(),
           IconButton(
             icon: const Icon(Icons.arrow_forward_ios),
-            color: ColorsManager.primarytealBlue,
+            color: ColorsManager.primaryAccent,
             onPressed: () {},
           )
         ],

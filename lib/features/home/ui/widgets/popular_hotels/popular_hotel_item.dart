@@ -30,7 +30,7 @@ class PopularHotelItem extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 120.h,
+            height: 100.h,
             width: 120.w,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -53,19 +53,33 @@ class PopularHotelItem extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .labelMedium!
-                        .copyWith(fontSize: 12.sp, color: ColorsManager.gery),
+                        .copyWith(fontSize: 12.sp, color: ColorsManager.darkGray),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
                   verticalSpace(4),
-                  Text(
-                    '${hotelData?.pricePerDay?.integerValue ?? '1800'}\$',
-                    style: Theme.of(context)
-                        .textTheme
-                        .labelLarge!
-                        .copyWith(color: Colors.green),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
+                  Row(
+                    children: [
+                      Text(
+                        '${hotelData?.pricePerDay?.integerValue ?? '1800'}\$',
+                        style: Theme.of(context)
+                            .textTheme
+                            .labelLarge!
+                            .copyWith(color: Colors.green),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                     horizontalSpace(5),
+                      Text(
+                        'per night',
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyLarge!
+                            .copyWith(color: ColorsManager.orange),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ],
                   ),
                 ],
               ),
