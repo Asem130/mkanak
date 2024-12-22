@@ -32,9 +32,7 @@ class HomeCarousalSliderBlocBuilder extends StatelessWidget {
 }
 
 Widget setupLoading() {
-  return Expanded(
-    child: HomeCarousalSliderShimmer(),
-  );
+  return HomeCarousalSliderShimmer();
 }
 
 Widget setupSuccess(documentsList) {

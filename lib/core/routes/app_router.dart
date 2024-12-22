@@ -15,9 +15,7 @@ class AppRouter {
       case Routes.homeScreen:
         return MaterialPageRoute(
             builder: (_) => BlocProvider<HomeCubit>(
-                create: (context) => getIt<HomeCubit>()
-                  ..getHomeBoosters(),
-                
+                create: (context) => getIt<HomeCubit>()..getPopularHotels()..getHomeBoosters(),
                 child: const HomeScreen()));
       // case Routes.loginScreen:
       //متنساش ال <>.

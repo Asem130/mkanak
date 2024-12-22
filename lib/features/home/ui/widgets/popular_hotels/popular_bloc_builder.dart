@@ -30,13 +30,7 @@ class PopularHotelsBlocBuilder extends StatelessWidget {
 }
 
 Widget setupLoading() {
-  return Expanded(
-    child: Column(
-      children: [
-        PopularShimmperLoading()
-      ],
-    ),
-  );
+  return PopularShimmperLoading();
 }
 
 Widget setupSuccess(documentsList) {

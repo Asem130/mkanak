@@ -5,7 +5,6 @@ import 'package:mkanak/core/helpers/space_vector.dart';
 import 'package:mkanak/core/themes/color_manger.dart';
 import 'package:mkanak/features/home/ui/widgets/discover_listview.dart';
 import 'package:mkanak/features/home/ui/widgets/discover_row.dart';
-import 'package:mkanak/features/home/ui/widgets/home_boosters/home_carousal_slider.dart';
 import 'package:mkanak/features/home/ui/widgets/home_boosters/home_carousal_slider_bloc_builder.dart';
 import 'package:mkanak/features/home/ui/widgets/popular_hotels/most_popular_row.dart';
 import 'package:mkanak/features/home/ui/widgets/popular_hotels/popular_bloc_builder.dart';

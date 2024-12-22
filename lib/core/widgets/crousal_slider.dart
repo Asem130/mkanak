@@ -8,32 +8,35 @@ class CustomCrouserSlider extends StatelessWidget {
       required this.scrollDirection,
       required this.enlargeFactor,
       required this.viewportFraction,
-      this.height});
+      this.height,
+      this.secondes});
   final List<Widget> items;
   final Axis scrollDirection;
   final double enlargeFactor;
   final double viewportFraction;
   final double? height;
+  final int? secondes;
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
-        options: CarouselOptions(
-          clipBehavior: Clip.antiAlias,
-          height: height,
-          aspectRatio: 16 / 9,
-          viewportFraction: viewportFraction,
-          initialPage: 0,
-          enableInfiniteScroll: true,
-          reverse: false,
-          autoPlay: true,
-          autoPlayInterval: const Duration(seconds: 3),
-          autoPlayAnimationDuration: const Duration(milliseconds: 800),
-          autoPlayCurve: Curves.fastOutSlowIn,
-          enlargeCenterPage: true,
-          enlargeFactor: enlargeFactor,
-          onPageChanged: (index, reason) => () {},
-          scrollDirection: scrollDirection,
-        ),
-        items: items);
+      options: CarouselOptions(
+        clipBehavior: Clip.antiAlias,
+        height: height,
+        aspectRatio: 16 / 9,
+        viewportFraction: viewportFraction,
+        initialPage: 0,
+        enableInfiniteScroll: true,
+        reverse: false,
+        autoPlay: true,
+        autoPlayInterval: Duration(seconds: secondes ?? 3),
+        autoPlayAnimationDuration: const Duration(milliseconds: 800),
+        autoPlayCurve: Curves.fastOutSlowIn,
+        enlargeCenterPage: true,
+        enlargeFactor: enlargeFactor,
+        onPageChanged: (index, reason) => () {},
+        scrollDirection: scrollDirection,
+      ),
+      items: items,
+    );
   }
 }
