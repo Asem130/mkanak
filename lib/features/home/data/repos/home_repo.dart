@@ -5,4 +5,5 @@ import 'package:mkanak/features/home/data/models/hotels/hotels_response_model.da
 abstract class HomeRepo {
   Future<ApiResult<HotelsResponseModel>> fetchPopularHotels();
   Future<ApiResult<HomeBoosterResponseModel>> fetchHomeBoosters();
+   Future<ApiResult<HotelsResponseModel>> fetchAllHotels();
 }

@@ -16,7 +16,7 @@ class HomeCarousalSliderShimmer extends StatelessWidget {
         height: 200,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: ColorsManager.primaryAccent,
+          color: ColorsManager.warmOrange,
           borderRadius: BorderRadius.circular(12),
         ),
       ),

@@ -8,6 +8,8 @@ import 'package:mkanak/features/home/data/repos/home_repo.dart';
 class HomeRepoImpl implements HomeRepo {
   final HomeApiService _homeApiService;
   HomeRepoImpl(this._homeApiService);
+
+  /// get popular hotels
   @override
   Future<ApiResult<HotelsResponseModel>> fetchPopularHotels() async {
     try {
@@ -18,11 +20,23 @@ class HomeRepoImpl implements HomeRepo {
     }
   }
 
+  /// get home boosters
   @override
   Future<ApiResult<HomeBoosterResponseModel>> fetchHomeBoosters() async {
     try {
       final response = await _homeApiService.getHomeBooster();
 
+      return ApiResult.success(response);
+    } catch (error) {
+      return ApiResult.failure(ApiErrorHandler.handle(error));
+    }
+  }
+
+  /// get all hotels
+  @override
+  Future<ApiResult<HotelsResponseModel>> fetchAllHotels() async {
+    try {
+      final response = await _homeApiService.getAllHotels();
       return ApiResult.success(response);
     } catch (error) {
       return ApiResult.failure(ApiErrorHandler.handle(error));

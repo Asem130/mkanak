@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mkanak/core/themes/color_manger.dart';
 
 class DiscoverRow extends StatelessWidget {
@@ -12,8 +13,10 @@ class DiscoverRow extends StatelessWidget {
           Text(
             'Discover',
             style: Theme.of(context).textTheme.headlineLarge!.copyWith(
+                fontSize:24.sp,
                   color: ColorsManager.mutedBrown,
-                  fontFamily: 'Popins',
+                  fontFamily: 'Roboto',
+                
                 ),
           ),
           const Spacer(),

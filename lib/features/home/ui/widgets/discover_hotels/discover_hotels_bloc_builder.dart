@@ -1,29 +1,28 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mkanak/features/home/logic/home_cubit.dart';
 import 'package:mkanak/features/home/logic/home_state.dart';
-import 'package:mkanak/features/home/ui/widgets/home_boosters/home_carousal_slider.dart';
-import 'package:mkanak/features/home/ui/widgets/home_boosters/home_carousal_slider_shimmer.dart';
+import 'package:mkanak/features/home/ui/widgets/discover_hotels/discover_hotels_shimmer_loading.dart';
+import 'package:mkanak/features/home/ui/widgets/discover_hotels/discover_listview.dart';
 
-class HomeCarousalSliderBlocBuilder extends StatelessWidget {
-  const HomeCarousalSliderBlocBuilder({super.key});
+class DiscoverHotelsBlocBuilder extends StatelessWidget {
+  const DiscoverHotelsBlocBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: BlocBuilder<HomeCubit, HomeState>(
         buildWhen: (previous, current) =>
-            current is HomeBoostersLoading ||
-            current is HomeBoostersSuccses ||
-            current is HomeBoostersError,
+            current is AllHotelsLoading ||
+            current is AllHotelsSuccses ||
+            current is AllHotelsError,
         builder: (context, state) {
           return state.maybeWhen(
-            homeBoostersLoading: () => setupLoading(),
-            homeBoostersSuccses: (documentsList) {
-              setupLoading();
+            allHotelsLoading: () => setupLoading(),
+            allHotelsSuccses: (documentsList) {
               return setupSuccess(documentsList);
             },
-            homeBoostersError: (error) => setupError(),
+            allHotelsError: (error) => setupError(),
             orElse: () => SizedBox.shrink(),
           );
         },
@@ -33,11 +32,11 @@ class HomeCarousalSliderBlocBuilder extends StatelessWidget {
 }
 
 Widget setupLoading() {
-  return HomeCarousalSliderShimmer();
+  return DiscoverHotelsShimmperLoading();
 }
 
 Widget setupSuccess(documentsList) {
-  return HomeCarouselSlider(
+  return DiscoverListView(
     documentsList: documentsList ?? [],
   );
 }

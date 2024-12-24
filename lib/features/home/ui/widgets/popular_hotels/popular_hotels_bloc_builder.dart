@@ -1,29 +1,28 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mkanak/features/home/logic/home_cubit.dart';
 import 'package:mkanak/features/home/logic/home_state.dart';
-import 'package:mkanak/features/home/ui/widgets/home_boosters/home_carousal_slider.dart';
-import 'package:mkanak/features/home/ui/widgets/home_boosters/home_carousal_slider_shimmer.dart';
+import 'package:mkanak/features/home/ui/widgets/popular_hotels/popular_hotels_listview.dart';
+import 'package:mkanak/features/home/ui/widgets/popular_hotels/popular_hotels_shimmper_loading.dart';
 
-class HomeCarousalSliderBlocBuilder extends StatelessWidget {
-  const HomeCarousalSliderBlocBuilder({super.key});
+class PopularHotelsBlocBuilder extends StatelessWidget {
+  const PopularHotelsBlocBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: BlocBuilder<HomeCubit, HomeState>(
         buildWhen: (previous, current) =>
-            current is HomeBoostersLoading ||
-            current is HomeBoostersSuccses ||
-            current is HomeBoostersError,
+            current is PopularHotelsLoading ||
+            current is PopularHotelsSuccses ||
+            current is PopularHotelsError,
         builder: (context, state) {
           return state.maybeWhen(
-            homeBoostersLoading: () => setupLoading(),
-            homeBoostersSuccses: (documentsList) {
-              setupLoading();
+            popularHotelsLoading: () => setupLoading(),
+            popularHotelsSuccses: (documentsList) {
               return setupSuccess(documentsList);
             },
-            homeBoostersError: (error) => setupError(),
+            popularHotelsError: (error) => setupError(),
             orElse: () => SizedBox.shrink(),
           );
         },
@@ -33,11 +32,11 @@ class HomeCarousalSliderBlocBuilder extends StatelessWidget {
 }
 
 Widget setupLoading() {
-  return HomeCarousalSliderShimmer();
+  return PopularHotelsShimmperLoading();
 }
 
 Widget setupSuccess(documentsList) {
-  return HomeCarouselSlider(
+  return PopularHotelsListView(
     documentsList: documentsList ?? [],
   );
 }

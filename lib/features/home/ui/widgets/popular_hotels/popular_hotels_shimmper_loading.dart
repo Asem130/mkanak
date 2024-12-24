@@ -4,8 +4,8 @@ import 'package:mkanak/core/helpers/space_vector.dart';
 import 'package:mkanak/core/themes/color_manger.dart';
 import 'package:shimmer/shimmer.dart';
 
-class PopularShimmperLoading extends StatelessWidget {
-  const PopularShimmperLoading({super.key});
+class PopularHotelsShimmperLoading extends StatelessWidget {
+  const PopularHotelsShimmperLoading({super.key});
 
   @override
   Widget build(BuildContext context) {

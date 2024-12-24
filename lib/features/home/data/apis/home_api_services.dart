@@ -14,4 +14,7 @@ abstract class HomeApiService {
 
   @GET(HomeApiConstants.bosters)
   Future<HomeBoosterResponseModel> getHomeBooster();
+
+  @GET(HomeApiConstants.allHotels)
+  Future<HotelsResponseModel> getAllHotels();
 }

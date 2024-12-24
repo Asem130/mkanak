@@ -27,7 +27,7 @@ class HomeCarouselSlider extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    bottom: 0,
+                    bottom: 40.h,
                     right: 0,
                     left: 0,
                     child: Container(
@@ -35,21 +35,22 @@ class HomeCarouselSlider extends StatelessWidget {
                           EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
                       decoration: BoxDecoration(
                         color: ColorsManager.black.withValues(alpha: 0.5),
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(16),
-                          bottomRight: Radius.circular(16),
-                        ),
                       ),
-                      child: Text(
-                        i?.boostersData?.title?.stringValue ?? '',
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineMedium!
-                            .copyWith(
-                              color: ColorsManager.lightBeige,
-                              fontFamily: 'Poppins',
-                              fontSize: 16.sp,
-                            ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            i?.boostersData?.title?.stringValue ?? '',
+                            style: Theme.of(context)
+                                .textTheme
+                                .headlineMedium!
+                                .copyWith(
+                                  color: ColorsManager.lightBeige,
+                                  fontFamily: 'Poppins',
+                                  fontSize: 18.sp,
+                                ),
+                          ),
+                        ],
                       ),
                     ),
                   ),

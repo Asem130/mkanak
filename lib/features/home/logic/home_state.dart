@@ -20,4 +20,11 @@ class HomeState with _$HomeState {
       List<HomeBoostersDocuments?>? documents) = HomeBoostersSuccses;
   const factory HomeState.homeBoostersError(ApiErrorModel apiErrorModel) =
       HomeBoostersError;
+
+  // All Hotels
+  const factory HomeState.allHotelsLoading() = AllHotelsLoading;
+  const factory HomeState.allHotelsSuccses(List<HotelsDocuments?>? documents) =
+      AllHotelsSuccses;
+  const factory HomeState.allHotelsError(ApiErrorModel apiErrorModel) =
+      AllHotelsError;
 }

@@ -27,6 +27,10 @@ mixin _$HomeState {
     required TResult Function(List<HomeBoostersDocuments?>? documents)
         homeBoostersSuccses,
     required TResult Function(ApiErrorModel apiErrorModel) homeBoostersError,
+    required TResult Function() allHotelsLoading,
+    required TResult Function(List<HotelsDocuments?>? documents)
+        allHotelsSuccses,
+    required TResult Function(ApiErrorModel apiErrorModel) allHotelsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -39,6 +43,9 @@ mixin _$HomeState {
     TResult? Function(List<HomeBoostersDocuments?>? documents)?
         homeBoostersSuccses,
     TResult? Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult? Function()? allHotelsLoading,
+    TResult? Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult? Function(ApiErrorModel apiErrorModel)? allHotelsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -51,6 +58,9 @@ mixin _$HomeState {
     TResult Function(List<HomeBoostersDocuments?>? documents)?
         homeBoostersSuccses,
     TResult Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult Function()? allHotelsLoading,
+    TResult Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult Function(ApiErrorModel apiErrorModel)? allHotelsError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -63,6 +73,9 @@ mixin _$HomeState {
     required TResult Function(HomeBoostersLoading value) homeBoostersLoading,
     required TResult Function(HomeBoostersSuccses value) homeBoostersSuccses,
     required TResult Function(HomeBoostersError value) homeBoostersError,
+    required TResult Function(AllHotelsLoading value) allHotelsLoading,
+    required TResult Function(AllHotelsSuccses value) allHotelsSuccses,
+    required TResult Function(AllHotelsError value) allHotelsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -74,6 +87,9 @@ mixin _$HomeState {
     TResult? Function(HomeBoostersLoading value)? homeBoostersLoading,
     TResult? Function(HomeBoostersSuccses value)? homeBoostersSuccses,
     TResult? Function(HomeBoostersError value)? homeBoostersError,
+    TResult? Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult? Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult? Function(AllHotelsError value)? allHotelsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -85,6 +101,9 @@ mixin _$HomeState {
     TResult Function(HomeBoostersLoading value)? homeBoostersLoading,
     TResult Function(HomeBoostersSuccses value)? homeBoostersSuccses,
     TResult Function(HomeBoostersError value)? homeBoostersError,
+    TResult Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult Function(AllHotelsError value)? allHotelsError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -160,6 +179,10 @@ class _$InitialImpl implements _Initial {
     required TResult Function(List<HomeBoostersDocuments?>? documents)
         homeBoostersSuccses,
     required TResult Function(ApiErrorModel apiErrorModel) homeBoostersError,
+    required TResult Function() allHotelsLoading,
+    required TResult Function(List<HotelsDocuments?>? documents)
+        allHotelsSuccses,
+    required TResult Function(ApiErrorModel apiErrorModel) allHotelsError,
   }) {
     return initial();
   }
@@ -175,6 +198,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(List<HomeBoostersDocuments?>? documents)?
         homeBoostersSuccses,
     TResult? Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult? Function()? allHotelsLoading,
+    TResult? Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult? Function(ApiErrorModel apiErrorModel)? allHotelsError,
   }) {
     return initial?.call();
   }
@@ -190,6 +216,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(List<HomeBoostersDocuments?>? documents)?
         homeBoostersSuccses,
     TResult Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult Function()? allHotelsLoading,
+    TResult Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult Function(ApiErrorModel apiErrorModel)? allHotelsError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -208,6 +237,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(HomeBoostersLoading value) homeBoostersLoading,
     required TResult Function(HomeBoostersSuccses value) homeBoostersSuccses,
     required TResult Function(HomeBoostersError value) homeBoostersError,
+    required TResult Function(AllHotelsLoading value) allHotelsLoading,
+    required TResult Function(AllHotelsSuccses value) allHotelsSuccses,
+    required TResult Function(AllHotelsError value) allHotelsError,
   }) {
     return initial(this);
   }
@@ -222,6 +254,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(HomeBoostersLoading value)? homeBoostersLoading,
     TResult? Function(HomeBoostersSuccses value)? homeBoostersSuccses,
     TResult? Function(HomeBoostersError value)? homeBoostersError,
+    TResult? Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult? Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult? Function(AllHotelsError value)? allHotelsError,
   }) {
     return initial?.call(this);
   }
@@ -236,6 +271,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(HomeBoostersLoading value)? homeBoostersLoading,
     TResult Function(HomeBoostersSuccses value)? homeBoostersSuccses,
     TResult Function(HomeBoostersError value)? homeBoostersError,
+    TResult Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult Function(AllHotelsError value)? allHotelsError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -300,6 +338,10 @@ class _$PopularHotelsLoadingImpl implements PopularHotelsLoading {
     required TResult Function(List<HomeBoostersDocuments?>? documents)
         homeBoostersSuccses,
     required TResult Function(ApiErrorModel apiErrorModel) homeBoostersError,
+    required TResult Function() allHotelsLoading,
+    required TResult Function(List<HotelsDocuments?>? documents)
+        allHotelsSuccses,
+    required TResult Function(ApiErrorModel apiErrorModel) allHotelsError,
   }) {
     return popularHotelsLoading();
   }
@@ -315,6 +357,9 @@ class _$PopularHotelsLoadingImpl implements PopularHotelsLoading {
     TResult? Function(List<HomeBoostersDocuments?>? documents)?
         homeBoostersSuccses,
     TResult? Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult? Function()? allHotelsLoading,
+    TResult? Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult? Function(ApiErrorModel apiErrorModel)? allHotelsError,
   }) {
     return popularHotelsLoading?.call();
   }
@@ -330,6 +375,9 @@ class _$PopularHotelsLoadingImpl implements PopularHotelsLoading {
     TResult Function(List<HomeBoostersDocuments?>? documents)?
         homeBoostersSuccses,
     TResult Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult Function()? allHotelsLoading,
+    TResult Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult Function(ApiErrorModel apiErrorModel)? allHotelsError,
     required TResult orElse(),
   }) {
     if (popularHotelsLoading != null) {
@@ -348,6 +396,9 @@ class _$PopularHotelsLoadingImpl implements PopularHotelsLoading {
     required TResult Function(HomeBoostersLoading value) homeBoostersLoading,
     required TResult Function(HomeBoostersSuccses value) homeBoostersSuccses,
     required TResult Function(HomeBoostersError value) homeBoostersError,
+    required TResult Function(AllHotelsLoading value) allHotelsLoading,
+    required TResult Function(AllHotelsSuccses value) allHotelsSuccses,
+    required TResult Function(AllHotelsError value) allHotelsError,
   }) {
     return popularHotelsLoading(this);
   }
@@ -362,6 +413,9 @@ class _$PopularHotelsLoadingImpl implements PopularHotelsLoading {
     TResult? Function(HomeBoostersLoading value)? homeBoostersLoading,
     TResult? Function(HomeBoostersSuccses value)? homeBoostersSuccses,
     TResult? Function(HomeBoostersError value)? homeBoostersError,
+    TResult? Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult? Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult? Function(AllHotelsError value)? allHotelsError,
   }) {
     return popularHotelsLoading?.call(this);
   }
@@ -376,6 +430,9 @@ class _$PopularHotelsLoadingImpl implements PopularHotelsLoading {
     TResult Function(HomeBoostersLoading value)? homeBoostersLoading,
     TResult Function(HomeBoostersSuccses value)? homeBoostersSuccses,
     TResult Function(HomeBoostersError value)? homeBoostersError,
+    TResult Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult Function(AllHotelsError value)? allHotelsError,
     required TResult orElse(),
   }) {
     if (popularHotelsLoading != null) {
@@ -478,6 +535,10 @@ class _$PopularHotelsSuccsesImpl implements PopularHotelsSuccses {
     required TResult Function(List<HomeBoostersDocuments?>? documents)
         homeBoostersSuccses,
     required TResult Function(ApiErrorModel apiErrorModel) homeBoostersError,
+    required TResult Function() allHotelsLoading,
+    required TResult Function(List<HotelsDocuments?>? documents)
+        allHotelsSuccses,
+    required TResult Function(ApiErrorModel apiErrorModel) allHotelsError,
   }) {
     return popularHotelsSuccses(documents);
   }
@@ -493,6 +554,9 @@ class _$PopularHotelsSuccsesImpl implements PopularHotelsSuccses {
     TResult? Function(List<HomeBoostersDocuments?>? documents)?
         homeBoostersSuccses,
     TResult? Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult? Function()? allHotelsLoading,
+    TResult? Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult? Function(ApiErrorModel apiErrorModel)? allHotelsError,
   }) {
     return popularHotelsSuccses?.call(documents);
   }
@@ -508,6 +572,9 @@ class _$PopularHotelsSuccsesImpl implements PopularHotelsSuccses {
     TResult Function(List<HomeBoostersDocuments?>? documents)?
         homeBoostersSuccses,
     TResult Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult Function()? allHotelsLoading,
+    TResult Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult Function(ApiErrorModel apiErrorModel)? allHotelsError,
     required TResult orElse(),
   }) {
     if (popularHotelsSuccses != null) {
@@ -526,6 +593,9 @@ class _$PopularHotelsSuccsesImpl implements PopularHotelsSuccses {
     required TResult Function(HomeBoostersLoading value) homeBoostersLoading,
     required TResult Function(HomeBoostersSuccses value) homeBoostersSuccses,
     required TResult Function(HomeBoostersError value) homeBoostersError,
+    required TResult Function(AllHotelsLoading value) allHotelsLoading,
+    required TResult Function(AllHotelsSuccses value) allHotelsSuccses,
+    required TResult Function(AllHotelsError value) allHotelsError,
   }) {
     return popularHotelsSuccses(this);
   }
@@ -540,6 +610,9 @@ class _$PopularHotelsSuccsesImpl implements PopularHotelsSuccses {
     TResult? Function(HomeBoostersLoading value)? homeBoostersLoading,
     TResult? Function(HomeBoostersSuccses value)? homeBoostersSuccses,
     TResult? Function(HomeBoostersError value)? homeBoostersError,
+    TResult? Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult? Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult? Function(AllHotelsError value)? allHotelsError,
   }) {
     return popularHotelsSuccses?.call(this);
   }
@@ -554,6 +627,9 @@ class _$PopularHotelsSuccsesImpl implements PopularHotelsSuccses {
     TResult Function(HomeBoostersLoading value)? homeBoostersLoading,
     TResult Function(HomeBoostersSuccses value)? homeBoostersSuccses,
     TResult Function(HomeBoostersError value)? homeBoostersError,
+    TResult Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult Function(AllHotelsError value)? allHotelsError,
     required TResult orElse(),
   }) {
     if (popularHotelsSuccses != null) {
@@ -655,6 +731,10 @@ class _$PopularHotelsErrorImpl implements PopularHotelsError {
     required TResult Function(List<HomeBoostersDocuments?>? documents)
         homeBoostersSuccses,
     required TResult Function(ApiErrorModel apiErrorModel) homeBoostersError,
+    required TResult Function() allHotelsLoading,
+    required TResult Function(List<HotelsDocuments?>? documents)
+        allHotelsSuccses,
+    required TResult Function(ApiErrorModel apiErrorModel) allHotelsError,
   }) {
     return popularHotelsError(apiErrorModel);
   }
@@ -670,6 +750,9 @@ class _$PopularHotelsErrorImpl implements PopularHotelsError {
     TResult? Function(List<HomeBoostersDocuments?>? documents)?
         homeBoostersSuccses,
     TResult? Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult? Function()? allHotelsLoading,
+    TResult? Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult? Function(ApiErrorModel apiErrorModel)? allHotelsError,
   }) {
     return popularHotelsError?.call(apiErrorModel);
   }
@@ -685,6 +768,9 @@ class _$PopularHotelsErrorImpl implements PopularHotelsError {
     TResult Function(List<HomeBoostersDocuments?>? documents)?
         homeBoostersSuccses,
     TResult Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult Function()? allHotelsLoading,
+    TResult Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult Function(ApiErrorModel apiErrorModel)? allHotelsError,
     required TResult orElse(),
   }) {
     if (popularHotelsError != null) {
@@ -703,6 +789,9 @@ class _$PopularHotelsErrorImpl implements PopularHotelsError {
     required TResult Function(HomeBoostersLoading value) homeBoostersLoading,
     required TResult Function(HomeBoostersSuccses value) homeBoostersSuccses,
     required TResult Function(HomeBoostersError value) homeBoostersError,
+    required TResult Function(AllHotelsLoading value) allHotelsLoading,
+    required TResult Function(AllHotelsSuccses value) allHotelsSuccses,
+    required TResult Function(AllHotelsError value) allHotelsError,
   }) {
     return popularHotelsError(this);
   }
@@ -717,6 +806,9 @@ class _$PopularHotelsErrorImpl implements PopularHotelsError {
     TResult? Function(HomeBoostersLoading value)? homeBoostersLoading,
     TResult? Function(HomeBoostersSuccses value)? homeBoostersSuccses,
     TResult? Function(HomeBoostersError value)? homeBoostersError,
+    TResult? Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult? Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult? Function(AllHotelsError value)? allHotelsError,
   }) {
     return popularHotelsError?.call(this);
   }
@@ -731,6 +823,9 @@ class _$PopularHotelsErrorImpl implements PopularHotelsError {
     TResult Function(HomeBoostersLoading value)? homeBoostersLoading,
     TResult Function(HomeBoostersSuccses value)? homeBoostersSuccses,
     TResult Function(HomeBoostersError value)? homeBoostersError,
+    TResult Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult Function(AllHotelsError value)? allHotelsError,
     required TResult orElse(),
   }) {
     if (popularHotelsError != null) {
@@ -804,6 +899,10 @@ class _$HomeBoostersLoadingImpl implements HomeBoostersLoading {
     required TResult Function(List<HomeBoostersDocuments?>? documents)
         homeBoostersSuccses,
     required TResult Function(ApiErrorModel apiErrorModel) homeBoostersError,
+    required TResult Function() allHotelsLoading,
+    required TResult Function(List<HotelsDocuments?>? documents)
+        allHotelsSuccses,
+    required TResult Function(ApiErrorModel apiErrorModel) allHotelsError,
   }) {
     return homeBoostersLoading();
   }
@@ -819,6 +918,9 @@ class _$HomeBoostersLoadingImpl implements HomeBoostersLoading {
     TResult? Function(List<HomeBoostersDocuments?>? documents)?
         homeBoostersSuccses,
     TResult? Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult? Function()? allHotelsLoading,
+    TResult? Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult? Function(ApiErrorModel apiErrorModel)? allHotelsError,
   }) {
     return homeBoostersLoading?.call();
   }
@@ -834,6 +936,9 @@ class _$HomeBoostersLoadingImpl implements HomeBoostersLoading {
     TResult Function(List<HomeBoostersDocuments?>? documents)?
         homeBoostersSuccses,
     TResult Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult Function()? allHotelsLoading,
+    TResult Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult Function(ApiErrorModel apiErrorModel)? allHotelsError,
     required TResult orElse(),
   }) {
     if (homeBoostersLoading != null) {
@@ -852,6 +957,9 @@ class _$HomeBoostersLoadingImpl implements HomeBoostersLoading {
     required TResult Function(HomeBoostersLoading value) homeBoostersLoading,
     required TResult Function(HomeBoostersSuccses value) homeBoostersSuccses,
     required TResult Function(HomeBoostersError value) homeBoostersError,
+    required TResult Function(AllHotelsLoading value) allHotelsLoading,
+    required TResult Function(AllHotelsSuccses value) allHotelsSuccses,
+    required TResult Function(AllHotelsError value) allHotelsError,
   }) {
     return homeBoostersLoading(this);
   }
@@ -866,6 +974,9 @@ class _$HomeBoostersLoadingImpl implements HomeBoostersLoading {
     TResult? Function(HomeBoostersLoading value)? homeBoostersLoading,
     TResult? Function(HomeBoostersSuccses value)? homeBoostersSuccses,
     TResult? Function(HomeBoostersError value)? homeBoostersError,
+    TResult? Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult? Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult? Function(AllHotelsError value)? allHotelsError,
   }) {
     return homeBoostersLoading?.call(this);
   }
@@ -880,6 +991,9 @@ class _$HomeBoostersLoadingImpl implements HomeBoostersLoading {
     TResult Function(HomeBoostersLoading value)? homeBoostersLoading,
     TResult Function(HomeBoostersSuccses value)? homeBoostersSuccses,
     TResult Function(HomeBoostersError value)? homeBoostersError,
+    TResult Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult Function(AllHotelsError value)? allHotelsError,
     required TResult orElse(),
   }) {
     if (homeBoostersLoading != null) {
@@ -981,6 +1095,10 @@ class _$HomeBoostersSuccsesImpl implements HomeBoostersSuccses {
     required TResult Function(List<HomeBoostersDocuments?>? documents)
         homeBoostersSuccses,
     required TResult Function(ApiErrorModel apiErrorModel) homeBoostersError,
+    required TResult Function() allHotelsLoading,
+    required TResult Function(List<HotelsDocuments?>? documents)
+        allHotelsSuccses,
+    required TResult Function(ApiErrorModel apiErrorModel) allHotelsError,
   }) {
     return homeBoostersSuccses(documents);
   }
@@ -996,6 +1114,9 @@ class _$HomeBoostersSuccsesImpl implements HomeBoostersSuccses {
     TResult? Function(List<HomeBoostersDocuments?>? documents)?
         homeBoostersSuccses,
     TResult? Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult? Function()? allHotelsLoading,
+    TResult? Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult? Function(ApiErrorModel apiErrorModel)? allHotelsError,
   }) {
     return homeBoostersSuccses?.call(documents);
   }
@@ -1011,6 +1132,9 @@ class _$HomeBoostersSuccsesImpl implements HomeBoostersSuccses {
     TResult Function(List<HomeBoostersDocuments?>? documents)?
         homeBoostersSuccses,
     TResult Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult Function()? allHotelsLoading,
+    TResult Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult Function(ApiErrorModel apiErrorModel)? allHotelsError,
     required TResult orElse(),
   }) {
     if (homeBoostersSuccses != null) {
@@ -1029,6 +1153,9 @@ class _$HomeBoostersSuccsesImpl implements HomeBoostersSuccses {
     required TResult Function(HomeBoostersLoading value) homeBoostersLoading,
     required TResult Function(HomeBoostersSuccses value) homeBoostersSuccses,
     required TResult Function(HomeBoostersError value) homeBoostersError,
+    required TResult Function(AllHotelsLoading value) allHotelsLoading,
+    required TResult Function(AllHotelsSuccses value) allHotelsSuccses,
+    required TResult Function(AllHotelsError value) allHotelsError,
   }) {
     return homeBoostersSuccses(this);
   }
@@ -1043,6 +1170,9 @@ class _$HomeBoostersSuccsesImpl implements HomeBoostersSuccses {
     TResult? Function(HomeBoostersLoading value)? homeBoostersLoading,
     TResult? Function(HomeBoostersSuccses value)? homeBoostersSuccses,
     TResult? Function(HomeBoostersError value)? homeBoostersError,
+    TResult? Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult? Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult? Function(AllHotelsError value)? allHotelsError,
   }) {
     return homeBoostersSuccses?.call(this);
   }
@@ -1057,6 +1187,9 @@ class _$HomeBoostersSuccsesImpl implements HomeBoostersSuccses {
     TResult Function(HomeBoostersLoading value)? homeBoostersLoading,
     TResult Function(HomeBoostersSuccses value)? homeBoostersSuccses,
     TResult Function(HomeBoostersError value)? homeBoostersError,
+    TResult Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult Function(AllHotelsError value)? allHotelsError,
     required TResult orElse(),
   }) {
     if (homeBoostersSuccses != null) {
@@ -1159,6 +1292,10 @@ class _$HomeBoostersErrorImpl implements HomeBoostersError {
     required TResult Function(List<HomeBoostersDocuments?>? documents)
         homeBoostersSuccses,
     required TResult Function(ApiErrorModel apiErrorModel) homeBoostersError,
+    required TResult Function() allHotelsLoading,
+    required TResult Function(List<HotelsDocuments?>? documents)
+        allHotelsSuccses,
+    required TResult Function(ApiErrorModel apiErrorModel) allHotelsError,
   }) {
     return homeBoostersError(apiErrorModel);
   }
@@ -1174,6 +1311,9 @@ class _$HomeBoostersErrorImpl implements HomeBoostersError {
     TResult? Function(List<HomeBoostersDocuments?>? documents)?
         homeBoostersSuccses,
     TResult? Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult? Function()? allHotelsLoading,
+    TResult? Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult? Function(ApiErrorModel apiErrorModel)? allHotelsError,
   }) {
     return homeBoostersError?.call(apiErrorModel);
   }
@@ -1189,6 +1329,9 @@ class _$HomeBoostersErrorImpl implements HomeBoostersError {
     TResult Function(List<HomeBoostersDocuments?>? documents)?
         homeBoostersSuccses,
     TResult Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult Function()? allHotelsLoading,
+    TResult Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult Function(ApiErrorModel apiErrorModel)? allHotelsError,
     required TResult orElse(),
   }) {
     if (homeBoostersError != null) {
@@ -1207,6 +1350,9 @@ class _$HomeBoostersErrorImpl implements HomeBoostersError {
     required TResult Function(HomeBoostersLoading value) homeBoostersLoading,
     required TResult Function(HomeBoostersSuccses value) homeBoostersSuccses,
     required TResult Function(HomeBoostersError value) homeBoostersError,
+    required TResult Function(AllHotelsLoading value) allHotelsLoading,
+    required TResult Function(AllHotelsSuccses value) allHotelsSuccses,
+    required TResult Function(AllHotelsError value) allHotelsError,
   }) {
     return homeBoostersError(this);
   }
@@ -1221,6 +1367,9 @@ class _$HomeBoostersErrorImpl implements HomeBoostersError {
     TResult? Function(HomeBoostersLoading value)? homeBoostersLoading,
     TResult? Function(HomeBoostersSuccses value)? homeBoostersSuccses,
     TResult? Function(HomeBoostersError value)? homeBoostersError,
+    TResult? Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult? Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult? Function(AllHotelsError value)? allHotelsError,
   }) {
     return homeBoostersError?.call(this);
   }
@@ -1235,6 +1384,9 @@ class _$HomeBoostersErrorImpl implements HomeBoostersError {
     TResult Function(HomeBoostersLoading value)? homeBoostersLoading,
     TResult Function(HomeBoostersSuccses value)? homeBoostersSuccses,
     TResult Function(HomeBoostersError value)? homeBoostersError,
+    TResult Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult Function(AllHotelsError value)? allHotelsError,
     required TResult orElse(),
   }) {
     if (homeBoostersError != null) {
@@ -1254,5 +1406,564 @@ abstract class HomeBoostersError implements HomeState {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HomeBoostersErrorImplCopyWith<_$HomeBoostersErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AllHotelsLoadingImplCopyWith<$Res> {
+  factory _$$AllHotelsLoadingImplCopyWith(_$AllHotelsLoadingImpl value,
+          $Res Function(_$AllHotelsLoadingImpl) then) =
+      __$$AllHotelsLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AllHotelsLoadingImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$AllHotelsLoadingImpl>
+    implements _$$AllHotelsLoadingImplCopyWith<$Res> {
+  __$$AllHotelsLoadingImplCopyWithImpl(_$AllHotelsLoadingImpl _value,
+      $Res Function(_$AllHotelsLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AllHotelsLoadingImpl implements AllHotelsLoading {
+  const _$AllHotelsLoadingImpl();
+
+  @override
+  String toString() {
+    return 'HomeState.allHotelsLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AllHotelsLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() popularHotelsLoading,
+    required TResult Function(List<HotelsDocuments?>? documents)
+        popularHotelsSuccses,
+    required TResult Function(ApiErrorModel apiErrorModel) popularHotelsError,
+    required TResult Function() homeBoostersLoading,
+    required TResult Function(List<HomeBoostersDocuments?>? documents)
+        homeBoostersSuccses,
+    required TResult Function(ApiErrorModel apiErrorModel) homeBoostersError,
+    required TResult Function() allHotelsLoading,
+    required TResult Function(List<HotelsDocuments?>? documents)
+        allHotelsSuccses,
+    required TResult Function(ApiErrorModel apiErrorModel) allHotelsError,
+  }) {
+    return allHotelsLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? popularHotelsLoading,
+    TResult? Function(List<HotelsDocuments?>? documents)? popularHotelsSuccses,
+    TResult? Function(ApiErrorModel apiErrorModel)? popularHotelsError,
+    TResult? Function()? homeBoostersLoading,
+    TResult? Function(List<HomeBoostersDocuments?>? documents)?
+        homeBoostersSuccses,
+    TResult? Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult? Function()? allHotelsLoading,
+    TResult? Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult? Function(ApiErrorModel apiErrorModel)? allHotelsError,
+  }) {
+    return allHotelsLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? popularHotelsLoading,
+    TResult Function(List<HotelsDocuments?>? documents)? popularHotelsSuccses,
+    TResult Function(ApiErrorModel apiErrorModel)? popularHotelsError,
+    TResult Function()? homeBoostersLoading,
+    TResult Function(List<HomeBoostersDocuments?>? documents)?
+        homeBoostersSuccses,
+    TResult Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult Function()? allHotelsLoading,
+    TResult Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult Function(ApiErrorModel apiErrorModel)? allHotelsError,
+    required TResult orElse(),
+  }) {
+    if (allHotelsLoading != null) {
+      return allHotelsLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(PopularHotelsLoading value) popularHotelsLoading,
+    required TResult Function(PopularHotelsSuccses value) popularHotelsSuccses,
+    required TResult Function(PopularHotelsError value) popularHotelsError,
+    required TResult Function(HomeBoostersLoading value) homeBoostersLoading,
+    required TResult Function(HomeBoostersSuccses value) homeBoostersSuccses,
+    required TResult Function(HomeBoostersError value) homeBoostersError,
+    required TResult Function(AllHotelsLoading value) allHotelsLoading,
+    required TResult Function(AllHotelsSuccses value) allHotelsSuccses,
+    required TResult Function(AllHotelsError value) allHotelsError,
+  }) {
+    return allHotelsLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(PopularHotelsLoading value)? popularHotelsLoading,
+    TResult? Function(PopularHotelsSuccses value)? popularHotelsSuccses,
+    TResult? Function(PopularHotelsError value)? popularHotelsError,
+    TResult? Function(HomeBoostersLoading value)? homeBoostersLoading,
+    TResult? Function(HomeBoostersSuccses value)? homeBoostersSuccses,
+    TResult? Function(HomeBoostersError value)? homeBoostersError,
+    TResult? Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult? Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult? Function(AllHotelsError value)? allHotelsError,
+  }) {
+    return allHotelsLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(PopularHotelsLoading value)? popularHotelsLoading,
+    TResult Function(PopularHotelsSuccses value)? popularHotelsSuccses,
+    TResult Function(PopularHotelsError value)? popularHotelsError,
+    TResult Function(HomeBoostersLoading value)? homeBoostersLoading,
+    TResult Function(HomeBoostersSuccses value)? homeBoostersSuccses,
+    TResult Function(HomeBoostersError value)? homeBoostersError,
+    TResult Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult Function(AllHotelsError value)? allHotelsError,
+    required TResult orElse(),
+  }) {
+    if (allHotelsLoading != null) {
+      return allHotelsLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AllHotelsLoading implements HomeState {
+  const factory AllHotelsLoading() = _$AllHotelsLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$AllHotelsSuccsesImplCopyWith<$Res> {
+  factory _$$AllHotelsSuccsesImplCopyWith(_$AllHotelsSuccsesImpl value,
+          $Res Function(_$AllHotelsSuccsesImpl) then) =
+      __$$AllHotelsSuccsesImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<HotelsDocuments?>? documents});
+}
+
+/// @nodoc
+class __$$AllHotelsSuccsesImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$AllHotelsSuccsesImpl>
+    implements _$$AllHotelsSuccsesImplCopyWith<$Res> {
+  __$$AllHotelsSuccsesImplCopyWithImpl(_$AllHotelsSuccsesImpl _value,
+      $Res Function(_$AllHotelsSuccsesImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? documents = freezed,
+  }) {
+    return _then(_$AllHotelsSuccsesImpl(
+      freezed == documents
+          ? _value._documents
+          : documents // ignore: cast_nullable_to_non_nullable
+              as List<HotelsDocuments?>?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AllHotelsSuccsesImpl implements AllHotelsSuccses {
+  const _$AllHotelsSuccsesImpl(final List<HotelsDocuments?>? documents)
+      : _documents = documents;
+
+  final List<HotelsDocuments?>? _documents;
+  @override
+  List<HotelsDocuments?>? get documents {
+    final value = _documents;
+    if (value == null) return null;
+    if (_documents is EqualUnmodifiableListView) return _documents;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'HomeState.allHotelsSuccses(documents: $documents)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AllHotelsSuccsesImpl &&
+            const DeepCollectionEquality()
+                .equals(other._documents, _documents));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_documents));
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AllHotelsSuccsesImplCopyWith<_$AllHotelsSuccsesImpl> get copyWith =>
+      __$$AllHotelsSuccsesImplCopyWithImpl<_$AllHotelsSuccsesImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() popularHotelsLoading,
+    required TResult Function(List<HotelsDocuments?>? documents)
+        popularHotelsSuccses,
+    required TResult Function(ApiErrorModel apiErrorModel) popularHotelsError,
+    required TResult Function() homeBoostersLoading,
+    required TResult Function(List<HomeBoostersDocuments?>? documents)
+        homeBoostersSuccses,
+    required TResult Function(ApiErrorModel apiErrorModel) homeBoostersError,
+    required TResult Function() allHotelsLoading,
+    required TResult Function(List<HotelsDocuments?>? documents)
+        allHotelsSuccses,
+    required TResult Function(ApiErrorModel apiErrorModel) allHotelsError,
+  }) {
+    return allHotelsSuccses(documents);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? popularHotelsLoading,
+    TResult? Function(List<HotelsDocuments?>? documents)? popularHotelsSuccses,
+    TResult? Function(ApiErrorModel apiErrorModel)? popularHotelsError,
+    TResult? Function()? homeBoostersLoading,
+    TResult? Function(List<HomeBoostersDocuments?>? documents)?
+        homeBoostersSuccses,
+    TResult? Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult? Function()? allHotelsLoading,
+    TResult? Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult? Function(ApiErrorModel apiErrorModel)? allHotelsError,
+  }) {
+    return allHotelsSuccses?.call(documents);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? popularHotelsLoading,
+    TResult Function(List<HotelsDocuments?>? documents)? popularHotelsSuccses,
+    TResult Function(ApiErrorModel apiErrorModel)? popularHotelsError,
+    TResult Function()? homeBoostersLoading,
+    TResult Function(List<HomeBoostersDocuments?>? documents)?
+        homeBoostersSuccses,
+    TResult Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult Function()? allHotelsLoading,
+    TResult Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult Function(ApiErrorModel apiErrorModel)? allHotelsError,
+    required TResult orElse(),
+  }) {
+    if (allHotelsSuccses != null) {
+      return allHotelsSuccses(documents);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(PopularHotelsLoading value) popularHotelsLoading,
+    required TResult Function(PopularHotelsSuccses value) popularHotelsSuccses,
+    required TResult Function(PopularHotelsError value) popularHotelsError,
+    required TResult Function(HomeBoostersLoading value) homeBoostersLoading,
+    required TResult Function(HomeBoostersSuccses value) homeBoostersSuccses,
+    required TResult Function(HomeBoostersError value) homeBoostersError,
+    required TResult Function(AllHotelsLoading value) allHotelsLoading,
+    required TResult Function(AllHotelsSuccses value) allHotelsSuccses,
+    required TResult Function(AllHotelsError value) allHotelsError,
+  }) {
+    return allHotelsSuccses(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(PopularHotelsLoading value)? popularHotelsLoading,
+    TResult? Function(PopularHotelsSuccses value)? popularHotelsSuccses,
+    TResult? Function(PopularHotelsError value)? popularHotelsError,
+    TResult? Function(HomeBoostersLoading value)? homeBoostersLoading,
+    TResult? Function(HomeBoostersSuccses value)? homeBoostersSuccses,
+    TResult? Function(HomeBoostersError value)? homeBoostersError,
+    TResult? Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult? Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult? Function(AllHotelsError value)? allHotelsError,
+  }) {
+    return allHotelsSuccses?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(PopularHotelsLoading value)? popularHotelsLoading,
+    TResult Function(PopularHotelsSuccses value)? popularHotelsSuccses,
+    TResult Function(PopularHotelsError value)? popularHotelsError,
+    TResult Function(HomeBoostersLoading value)? homeBoostersLoading,
+    TResult Function(HomeBoostersSuccses value)? homeBoostersSuccses,
+    TResult Function(HomeBoostersError value)? homeBoostersError,
+    TResult Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult Function(AllHotelsError value)? allHotelsError,
+    required TResult orElse(),
+  }) {
+    if (allHotelsSuccses != null) {
+      return allHotelsSuccses(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AllHotelsSuccses implements HomeState {
+  const factory AllHotelsSuccses(final List<HotelsDocuments?>? documents) =
+      _$AllHotelsSuccsesImpl;
+
+  List<HotelsDocuments?>? get documents;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AllHotelsSuccsesImplCopyWith<_$AllHotelsSuccsesImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AllHotelsErrorImplCopyWith<$Res> {
+  factory _$$AllHotelsErrorImplCopyWith(_$AllHotelsErrorImpl value,
+          $Res Function(_$AllHotelsErrorImpl) then) =
+      __$$AllHotelsErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({ApiErrorModel apiErrorModel});
+}
+
+/// @nodoc
+class __$$AllHotelsErrorImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$AllHotelsErrorImpl>
+    implements _$$AllHotelsErrorImplCopyWith<$Res> {
+  __$$AllHotelsErrorImplCopyWithImpl(
+      _$AllHotelsErrorImpl _value, $Res Function(_$AllHotelsErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? apiErrorModel = null,
+  }) {
+    return _then(_$AllHotelsErrorImpl(
+      null == apiErrorModel
+          ? _value.apiErrorModel
+          : apiErrorModel // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AllHotelsErrorImpl implements AllHotelsError {
+  const _$AllHotelsErrorImpl(this.apiErrorModel);
+
+  @override
+  final ApiErrorModel apiErrorModel;
+
+  @override
+  String toString() {
+    return 'HomeState.allHotelsError(apiErrorModel: $apiErrorModel)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AllHotelsErrorImpl &&
+            (identical(other.apiErrorModel, apiErrorModel) ||
+                other.apiErrorModel == apiErrorModel));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, apiErrorModel);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AllHotelsErrorImplCopyWith<_$AllHotelsErrorImpl> get copyWith =>
+      __$$AllHotelsErrorImplCopyWithImpl<_$AllHotelsErrorImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() popularHotelsLoading,
+    required TResult Function(List<HotelsDocuments?>? documents)
+        popularHotelsSuccses,
+    required TResult Function(ApiErrorModel apiErrorModel) popularHotelsError,
+    required TResult Function() homeBoostersLoading,
+    required TResult Function(List<HomeBoostersDocuments?>? documents)
+        homeBoostersSuccses,
+    required TResult Function(ApiErrorModel apiErrorModel) homeBoostersError,
+    required TResult Function() allHotelsLoading,
+    required TResult Function(List<HotelsDocuments?>? documents)
+        allHotelsSuccses,
+    required TResult Function(ApiErrorModel apiErrorModel) allHotelsError,
+  }) {
+    return allHotelsError(apiErrorModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? popularHotelsLoading,
+    TResult? Function(List<HotelsDocuments?>? documents)? popularHotelsSuccses,
+    TResult? Function(ApiErrorModel apiErrorModel)? popularHotelsError,
+    TResult? Function()? homeBoostersLoading,
+    TResult? Function(List<HomeBoostersDocuments?>? documents)?
+        homeBoostersSuccses,
+    TResult? Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult? Function()? allHotelsLoading,
+    TResult? Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult? Function(ApiErrorModel apiErrorModel)? allHotelsError,
+  }) {
+    return allHotelsError?.call(apiErrorModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? popularHotelsLoading,
+    TResult Function(List<HotelsDocuments?>? documents)? popularHotelsSuccses,
+    TResult Function(ApiErrorModel apiErrorModel)? popularHotelsError,
+    TResult Function()? homeBoostersLoading,
+    TResult Function(List<HomeBoostersDocuments?>? documents)?
+        homeBoostersSuccses,
+    TResult Function(ApiErrorModel apiErrorModel)? homeBoostersError,
+    TResult Function()? allHotelsLoading,
+    TResult Function(List<HotelsDocuments?>? documents)? allHotelsSuccses,
+    TResult Function(ApiErrorModel apiErrorModel)? allHotelsError,
+    required TResult orElse(),
+  }) {
+    if (allHotelsError != null) {
+      return allHotelsError(apiErrorModel);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(PopularHotelsLoading value) popularHotelsLoading,
+    required TResult Function(PopularHotelsSuccses value) popularHotelsSuccses,
+    required TResult Function(PopularHotelsError value) popularHotelsError,
+    required TResult Function(HomeBoostersLoading value) homeBoostersLoading,
+    required TResult Function(HomeBoostersSuccses value) homeBoostersSuccses,
+    required TResult Function(HomeBoostersError value) homeBoostersError,
+    required TResult Function(AllHotelsLoading value) allHotelsLoading,
+    required TResult Function(AllHotelsSuccses value) allHotelsSuccses,
+    required TResult Function(AllHotelsError value) allHotelsError,
+  }) {
+    return allHotelsError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(PopularHotelsLoading value)? popularHotelsLoading,
+    TResult? Function(PopularHotelsSuccses value)? popularHotelsSuccses,
+    TResult? Function(PopularHotelsError value)? popularHotelsError,
+    TResult? Function(HomeBoostersLoading value)? homeBoostersLoading,
+    TResult? Function(HomeBoostersSuccses value)? homeBoostersSuccses,
+    TResult? Function(HomeBoostersError value)? homeBoostersError,
+    TResult? Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult? Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult? Function(AllHotelsError value)? allHotelsError,
+  }) {
+    return allHotelsError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(PopularHotelsLoading value)? popularHotelsLoading,
+    TResult Function(PopularHotelsSuccses value)? popularHotelsSuccses,
+    TResult Function(PopularHotelsError value)? popularHotelsError,
+    TResult Function(HomeBoostersLoading value)? homeBoostersLoading,
+    TResult Function(HomeBoostersSuccses value)? homeBoostersSuccses,
+    TResult Function(HomeBoostersError value)? homeBoostersError,
+    TResult Function(AllHotelsLoading value)? allHotelsLoading,
+    TResult Function(AllHotelsSuccses value)? allHotelsSuccses,
+    TResult Function(AllHotelsError value)? allHotelsError,
+    required TResult orElse(),
+  }) {
+    if (allHotelsError != null) {
+      return allHotelsError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AllHotelsError implements HomeState {
+  const factory AllHotelsError(final ApiErrorModel apiErrorModel) =
+      _$AllHotelsErrorImpl;
+
+  ApiErrorModel get apiErrorModel;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AllHotelsErrorImplCopyWith<_$AllHotelsErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
