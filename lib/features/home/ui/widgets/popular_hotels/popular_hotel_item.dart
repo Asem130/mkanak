@@ -53,7 +53,7 @@ class PopularHotelItem extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .labelMedium!
-                        .copyWith(fontSize: 12.sp, color: ColorsManager.darkGray),
+                        .copyWith(fontSize: 12.sp, color: ColorsManager.darkGray.withValues(alpha: 0.6)),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -75,7 +75,7 @@ class PopularHotelItem extends StatelessWidget {
                         style: Theme.of(context)
                             .textTheme
                             .bodyLarge!
-                            .copyWith(color: ColorsManager.orange),
+                            .copyWith(color: ColorsManager.darkGray.withValues(alpha: 0.4)),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),

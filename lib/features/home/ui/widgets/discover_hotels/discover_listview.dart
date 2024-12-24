@@ -12,6 +12,7 @@ class DiscoverListView extends StatelessWidget {
     return SizedBox(
       height: 150.h,
       child: ListView.builder(
+        physics: BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => Padding(
           padding: const EdgeInsets.only(right: 8),
