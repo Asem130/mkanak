@@ -1,4 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- <uses-sdk tools:overrideLibrary="io.flutter.plugins.firebase.auth"/> -->
+
     <application
         android:label="mkanak"
         android:name="${applicationName}"

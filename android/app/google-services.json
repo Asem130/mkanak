@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "689140004802",
-    "project_id": "mkanak-9a474",
-    "storage_bucket": "mkanak-9a474.firebasestorage.app"
+    "project_number": "893333876285",
+    "project_id": "mkanak-39a56",
+    "storage_bucket": "mkanak-39a56.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:689140004802:android:bfcf45ca935da90500085b",
+        "mobilesdk_app_id": "1:893333876285:android:4d374658fc8324dd210454",
         "android_client_info": {
           "package_name": "com.example.mkanak"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBnPjhSgpYzcEiJfB3XZ0RaHCvvQkU3zSk"
+          "current_key": "AIzaSyBWt8frWhA3QEbzbJivGMth1hcX7NxKm30"
         }
       ],
       "services": {

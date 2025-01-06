@@ -41,4 +41,6 @@ class HomeCubit extends Cubit<HomeState> {
       emit(HomeState.allHotelsError(apiErrorModel));
     });
   }
+
+  
 }

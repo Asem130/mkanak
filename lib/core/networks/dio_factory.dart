@@ -17,7 +17,6 @@ class DioFactory {
         ..options.receiveTimeout = timeOut;
       addDioHeader();
       addDioInterceptor();
-
       return dio!;
     } else {
       return dio!;
@@ -34,40 +33,10 @@ class DioFactory {
     );
   }
 
-  // static void setTokenIntoHeaderAfterLogin(String token) {
-  //   dio?.options.headers = {'Authorization': 'Bearer $token'};
-  // }
-
   static void addDioHeader() async {
     dio?.options.headers = {
       'Accept': 'application/json',
-      // 'Authorization':
-      // 'Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}'
+      // 'Authorization': 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ii1XWnBLUSJ9.eyJpc3MiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGUuY29tLyIsImF1ZCI6Im1rYW5hay0zOWE1NiIsImlhdCI6MTczNjE2NjY3OSwiZXhwIjoxNzM3Mzc2Mjc5LCJ1c2VyX2lkIjoibTg4bHNxcHRFRFRCZlFCWGFJb0xCY0pEUlFIMiIsImVtYWlsIjoiYXNlbTExMDRAZ21haWwuY29tIiwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIiwidmVyaWZpZWQiOmZhbHNlfQ.ycKiJsSmr-RgRKrRMwQGvejZxcCspP0FTh2XCySCOTXlWh2G5_qNqHgooLdK-XXdtdlwKSRLop6Ia4dx-w9pUry1B-9zf58lJa9Bl4WGuUpSbUp6ngt27uF1MIR1yZ-jsjsrdAbe9Ja3yPUoliqJUHwmDj8rBl9m5L1P6upCc0g6McQYVf3uhiB0zvyJ2s3UD_XtYl2lF-6YmX5zsVv8olc3Y7GgzvLQWiIhwaylwPinnG5whw0-EWfTCPMgU3v73NI_m0P2HSPwszPZwF7Zmnaz41k5Ob-FJCp_tKIxPYTp2NdEpjJboIYZ50tSZ0f2V_kGWKXClW9Ogc1tWAQvpQ'
     };
   }
 }
-// import 'package:dio/dio.dart';
-// import 'package:firebase_auth/firebase_auth.dart';
-
-// Future<void> fetchFirestoreDocument() async {
-//   final dio = Dio();
-
-//   try {
-//     // Get ID Token from Firebase Auth
-//     String? idToken = await FirebaseAuth.instance.currentUser?.getIdToken();
-
-//     // Perform GET request to Firestore REST API
-//     final response = await dio.get(
-//       'https://firestore.googleapis.com/v1/projects/mkanak-9a474/databases/(default)/documents/Hotels/drZ87X5XenvpqHGdoYEM',
-//       options: Options(
-//         headers: {
-//           'Authorization': 'Bearer $idToken',
-//         },
-//       ),
-//     );
-
-//     print('Document Data: ${response.data}');
-//   } catch (e) {
-//     print('Error fetching Firestore document: $e');
-//   }
-// }

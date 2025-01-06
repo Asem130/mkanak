@@ -34,7 +34,8 @@ dependencies:
   cloud_firestore: ^5.6.0
   cupertino_icons: ^1.0.8
   dio: ^5.7.0
-  firebase_core: ^3.8.0
+  firebase_auth: ^5.3.4
+  firebase_core: ^3.9.0
   firebase_database: ^11.1.6
   firebase_remote_config: ^5.1.5
   flutter:
@@ -89,14 +90,20 @@ flutter:
     - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins-Regular.ttf
- 
+
     - family: Roboto
       fonts:
-        - asset: assets/fonts/Roboto-Regular.ttf    
+        - asset: assets/fonts/Roboto-Regular.ttf
 
     - family: SourceSans3
       fonts:
-        - asset: assets\fonts\SourceSans3-Regular.ttf   
+        - asset: assets\fonts\SourceSans3-Regular.ttf
+    - family: RobotoSlab
+      fonts:
+        - asset: assets/fonts/RobotoSlab-Regular.ttf
+    - family: Nunito Sans
+      fonts:
+        - asset: assets/fonts/NunitoSans_10pt-Regular.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

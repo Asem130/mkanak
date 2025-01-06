@@ -4,7 +4,11 @@ import 'package:mkanak/core/di/depandency_injection.dart';
 import 'package:mkanak/core/routes/routes.dart';
 import 'package:mkanak/features/home/home_screen.dart';
 import 'package:mkanak/features/home/logic/home_cubit.dart';
+import 'package:mkanak/features/login/logic/cubit/login_cubit.dart';
+import 'package:mkanak/features/login/login_screen.dart';
 import 'package:mkanak/features/onboarding/onboarding_screen.dart';
+import 'package:mkanak/features/registration/logic/cubit/registration_cubit.dart';
+import 'package:mkanak/features/registration/ui/register_screen.dart';
 
 class AppRouter {
   Route? generateRoutes(RouteSettings settings) {
@@ -20,17 +24,19 @@ class AppRouter {
                   ..getHomeBoosters()
                   ..getPopularHotels(),
                 child: const HomeScreen()));
-      // case Routes.loginScreen:
-      //متنساش ال <>.
-      // return MaterialPageRoute(
-      //     builder: (_) => BlocProvider<LoginCubit>(
-      //         create: (context) => getIt<LoginCubit>(),
-      //         child: const LoginSceen()));
-      // case Routes.registerScreen:
-      //   return MaterialPageRoute(
-      //       builder: (_) => BlocProvider<RegisterCubit>(
-      //           create: (context) => getIt<RegisterCubit>(),
-      //           child: const RegisterScreen()));
+      case Routes.loginScreen:
+        //متنساش ال <>.
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => getIt<LoginCubit>(),
+                  child: const LoginScreen(),
+                ));
+      case Routes.registerScreen:
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider<RegistrationCubit>(
+                  create: (context) => getIt<RegistrationCubit>(),
+                  child: const RegisterScreen(),
+                ));
       // case Routes.homeScreen:
       //   return MaterialPageRoute(
       //       builder: (_) => BlocProvider(

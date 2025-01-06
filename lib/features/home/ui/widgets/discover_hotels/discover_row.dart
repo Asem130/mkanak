@@ -4,7 +4,6 @@ import 'package:mkanak/core/themes/color_manger.dart';
 
 class DiscoverRow extends StatelessWidget {
   const DiscoverRow({super.key});
-
   @override
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
@@ -13,10 +12,9 @@ class DiscoverRow extends StatelessWidget {
           Text(
             'Discover',
             style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                fontSize:24.sp,
+                  fontSize: 24.sp,
                   color: ColorsManager.mutedBrown,
                   fontFamily: 'Roboto',
-                
                 ),
           ),
           const Spacer(),

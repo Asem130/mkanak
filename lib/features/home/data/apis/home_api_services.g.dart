@@ -15,7 +15,7 @@ class _HomeApiService implements HomeApiService {
     this.errorLogger,
   }) {
     baseUrl ??=
-        'https://firestore.googleapis.com/v1/projects/mkanak-9a474/databases/(default)/documents/';
+        'https://firestore.googleapis.com/v1/projects/mkanak-39a56/databases/(default)/documents/';
   }
 
   final Dio _dio;
@@ -70,7 +70,7 @@ class _HomeApiService implements HomeApiService {
     )
         .compose(
           _dio.options,
-          'bosters',
+          'boosters',
           queryParameters: queryParameters,
           data: _data,
         )
@@ -103,7 +103,7 @@ class _HomeApiService implements HomeApiService {
     )
         .compose(
           _dio.options,
-          'all hotels',
+          'hotels',
           queryParameters: queryParameters,
           data: _data,
         )

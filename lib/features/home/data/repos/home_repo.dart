@@ -6,4 +6,5 @@ abstract class HomeRepo {
   Future<ApiResult<HotelsResponseModel>> fetchPopularHotels();
   Future<ApiResult<HomeBoosterResponseModel>> fetchHomeBoosters();
    Future<ApiResult<HotelsResponseModel>> fetchAllHotels();
+   
 }

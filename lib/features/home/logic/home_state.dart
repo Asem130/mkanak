@@ -27,4 +27,6 @@ class HomeState with _$HomeState {
       AllHotelsSuccses;
   const factory HomeState.allHotelsError(ApiErrorModel apiErrorModel) =
       AllHotelsError;
+
+ 
 }

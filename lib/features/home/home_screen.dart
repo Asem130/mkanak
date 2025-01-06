@@ -1,12 +1,9 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mkanak/core/helpers/space_vector.dart';
 import 'package:mkanak/core/themes/color_manger.dart';
-import 'package:mkanak/features/home/logic/home_cubit.dart';
 import 'package:mkanak/features/home/ui/widgets/discover_hotels/discover_hotels_bloc_builder.dart';
-import 'package:mkanak/features/home/ui/widgets/discover_row.dart';
+import 'package:mkanak/features/home/ui/widgets/discover_hotels/discover_row.dart';
 import 'package:mkanak/features/home/ui/widgets/home_boosters/home_carousal_slider_bloc_builder.dart';
 import 'package:mkanak/features/home/ui/widgets/popular_hotels/most_popular_row.dart';
 import 'package:mkanak/features/home/ui/widgets/popular_hotels/popular_hotels_bloc_builder.dart';
@@ -18,6 +15,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       backgroundColor: ColorsManager.white,
       body: SafeArea(
         child: Padding(
