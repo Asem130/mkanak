@@ -28,5 +28,9 @@ class HomeState with _$HomeState {
   const factory HomeState.allHotelsError(ApiErrorModel apiErrorModel) =
       AllHotelsError;
 
- 
+  // searched hotels
+
+  const factory HomeState.searchedHotelsSuccses(
+      List<HotelsDocuments?>? documents) = SearchedHotelsSuccses;
+  const factory HomeState.searchedHotelsError() = SearchedHotelsError;
 }

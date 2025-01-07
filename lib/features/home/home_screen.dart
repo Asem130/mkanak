@@ -23,6 +23,7 @@ class HomeScreen extends StatelessWidget {
           child: CustomScrollView(slivers: [
             HomeSliverAppBar(),
             SliverToBoxAdapter(child: verticalSpace(10)),
+            
             HomeCarousalSliderBlocBuilder(),
             SliverToBoxAdapter(child: verticalSpace(10)),
             MostPopularRow(),

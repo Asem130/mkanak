@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mkanak/core/themes/color_manger.dart';
+import 'package:mkanak/features/home/logic/home_cubit.dart';
 
 class HomeSearch extends StatelessWidget {
   const HomeSearch({super.key});
@@ -9,9 +11,11 @@ class HomeSearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      
+      onChanged: (value) {
+        context.read<HomeCubit>().getSearchedHotelsList(hotelName: value);
+      },
+      controller: context.read<HomeCubit>().searchedHotelController,
       decoration: InputDecoration(
-        
         contentPadding: EdgeInsets.only(left: 10.w, top: 10.h),
         hintText: 'Search for hotels',
         hintStyle: TextStyle(
