@@ -5,4 +5,5 @@ class HomeApiConstants {
   static const allHotels = 'hotels';
   static const bosters = 'boosters';
   static const users = 'users';
+  static const searchForHotel = ':runQuery';
 }

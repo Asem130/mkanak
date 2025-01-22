@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mkanak/core/networks/api_error_model.dart';
 import 'package:mkanak/features/home/data/models/boosters/home_booster_model.dart';
 import 'package:mkanak/features/home/data/models/hotels/hotels_response_model.dart';
+import 'package:mkanak/features/home/data/models/hotels/searched_hotels_response_model.dart';
 
 part 'home_state.freezed.dart';
 
@@ -30,7 +31,13 @@ class HomeState with _$HomeState {
 
   // searched hotels
 
+  // const factory HomeState.searchedHotelsSuccses(
+  //     List<HotelsDocuments?>? documents) = SearchedHotelsSuccses;
+  // const factory HomeState.searchedHotelsError() = SearchedHotelsError;
+  const factory HomeState.searchedHotelsLoading() = SearchedHotelsLoading;
   const factory HomeState.searchedHotelsSuccses(
-      List<HotelsDocuments?>? documents) = SearchedHotelsSuccses;
-  const factory HomeState.searchedHotelsError() = SearchedHotelsError;
+      List<SearchedHotelsDocument?>? documents) = SearchedHotelsSuccses;
+  const factory HomeState.searchedHotelsError(ApiErrorModel apiErrorModel) =
+      SearchedHotelsError;
+  const factory HomeState.searchedHotelsEmpty() = SearchedHotelsEmpty;
 }

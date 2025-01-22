@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mkanak/core/helpers/space_vector.dart';
 import 'package:mkanak/core/themes/color_manger.dart';
-import 'package:mkanak/features/home/data/models/hotels/hotels_response_model.dart';
+import 'package:mkanak/features/home/data/models/hotels/searched_hotels_response_model.dart';
 
 class SearchedHotelItem extends StatelessWidget {
   const SearchedHotelItem({
     super.key,
     required this.hotelData,
   });
-  final HotelsData? hotelData;
+  final SearchedHotelsData? hotelData;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,7 +23,7 @@ class SearchedHotelItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
             child: Image.network(
               hotelData?.profileImage?.stringValue ?? 'Default Image',
-              width: 120.w,
+              width: 100.w,
               height: 100.h,
               fit: BoxFit.cover,
             ),

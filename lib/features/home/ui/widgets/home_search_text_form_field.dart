@@ -5,18 +5,18 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mkanak/core/themes/color_manger.dart';
 import 'package:mkanak/features/home/logic/home_cubit.dart';
 
-class HomeSearch extends StatelessWidget {
-  const HomeSearch({super.key});
+class HomeSearchTextFormField extends StatelessWidget {
+  const HomeSearchTextFormField({super.key});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       onChanged: (value) {
-        context.read<HomeCubit>().getSearchedHotelsList(hotelName: value);
+       BlocProvider.of<HomeCubit>(context).searchForHotel(name: value);
       },
       controller: context.read<HomeCubit>().searchedHotelController,
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.only(left: 10.w, top: 10.h),
+        contentPadding: EdgeInsets.all(15),
         hintText: 'Search for hotels',
         hintStyle: TextStyle(
           color: ColorsManager.darkGray,

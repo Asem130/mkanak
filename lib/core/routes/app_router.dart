@@ -4,6 +4,7 @@ import 'package:mkanak/core/di/depandency_injection.dart';
 import 'package:mkanak/core/routes/routes.dart';
 import 'package:mkanak/features/home/home_screen.dart';
 import 'package:mkanak/features/home/logic/home_cubit.dart';
+import 'package:mkanak/features/home/ui/widgets/home_search_screen.dart';
 import 'package:mkanak/features/login/logic/cubit/login_cubit.dart';
 import 'package:mkanak/features/login/login_screen.dart';
 import 'package:mkanak/features/onboarding/onboarding_screen.dart';
@@ -37,14 +38,13 @@ class AppRouter {
                   create: (context) => getIt<RegistrationCubit>(),
                   child: const RegisterScreen(),
                 ));
-      // case Routes.homeScreen:
-      //   return MaterialPageRoute(
-      //       builder: (_) => BlocProvider(
-      //             create: (context) => HomeCubit(getIt())
-      //               ..getSpecialization(), // ركز هنا انا هنا مسجلتش ال HomeCubit فى ال Di  وعملت كد
-      //             child: const HomeScreen(),
-      //
-      // ));
+      case Routes.searchScreen:
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => getIt<HomeCubit>(),
+                  child: const HomeSearchScreen(),
+                ));
+
       default:
         return null;
     }

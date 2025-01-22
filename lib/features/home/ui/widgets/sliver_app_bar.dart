@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mkanak/core/helpers/extensions.dart';
+import 'package:mkanak/core/routes/routes.dart';
 import 'package:mkanak/core/themes/color_manger.dart';
-import 'package:mkanak/features/home/ui/widgets/home_search.dart';
+import 'package:mkanak/features/home/ui/widgets/home_search_continer.dart';
+import 'package:mkanak/features/home/ui/widgets/home_search_text_form_field.dart';
 
 class HomeSliverAppBar extends StatelessWidget {
   const HomeSliverAppBar({super.key});
@@ -18,15 +21,19 @@ class HomeSliverAppBar extends StatelessWidget {
         titlePadding: EdgeInsets.symmetric(vertical: 8.h),
         expandedTitleScale: 1.1,
         background: Padding(
-          padding:  EdgeInsets.only(bottom: 40.0.h),
+          padding: EdgeInsets.only(bottom: 40.0.h),
           child: Image.asset(
             'assets/images/2.png',
             width: 180,
-            height:200,
+            height: 200,
           ),
         ),
         centerTitle: true,
-        title: const HomeSearch(),
+        title: GestureDetector(
+            onTap: () {
+              context.pushNamed(Routes.searchScreen);
+            },
+            child: const HomeSearchContiner()),
       ),
     );
   }

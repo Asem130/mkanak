@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:mkanak/features/home/data/apis/home_api_constant.dart';
 import 'package:mkanak/features/home/data/models/boosters/home_booster_model.dart';
 import 'package:mkanak/features/home/data/models/hotels/hotels_response_model.dart';
+import 'package:mkanak/features/home/data/models/hotels/searched_hotels_response_model.dart';
 import 'package:retrofit/retrofit.dart';
 part 'home_api_services.g.dart';
 
@@ -17,4 +18,9 @@ abstract class HomeApiService {
 
   @GET(HomeApiConstants.allHotels)
   Future<HotelsResponseModel> getAllHotels();
+
+  @POST(HomeApiConstants.searchForHotel)
+  Future<SearchedHotelsResponseModelWrapper> searchForHotel(
+    @Body() Map<String, dynamic> queryBody,
+  );
 }
