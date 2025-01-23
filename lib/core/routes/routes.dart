@@ -4,4 +4,5 @@ class Routes {
   static const homeScreen = '/homeScreen';
   static const searchScreen = '/searchScreen';
   static const registerScreen = '/registerScreen';
+  static const hotelScreen = '/hotelScreen';
 }

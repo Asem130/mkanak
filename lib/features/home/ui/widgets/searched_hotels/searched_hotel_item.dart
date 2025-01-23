@@ -14,25 +14,26 @@ class SearchedHotelItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: ColorsManager.white, borderRadius: BorderRadius.circular(8)),
+          color: ColorsManager.lightBeige, borderRadius: BorderRadius.circular(8)),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(12),
             child: Image.network(
               hotelData?.profileImage?.stringValue ?? 'Default Image',
               width: 100.w,
-              height: 100.h,
+              height: 80.h,
               fit: BoxFit.cover,
             ),
           ),
           SizedBox(
-            height: 100.h,
-            width: 120.w,
+            height: 80.h,
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.symmetric(
+                horizontal: 8.h,
+              ),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -46,7 +47,7 @@ class SearchedHotelItem extends StatelessWidget {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  verticalSpace(4),
+                  verticalSpace(2),
                   Text(
                     hotelData?.cityName?.stringValue ?? 'Location',
                     style: Theme.of(context).textTheme.labelMedium!.copyWith(
@@ -55,7 +56,33 @@ class SearchedHotelItem extends StatelessWidget {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  verticalSpace(4),
+                  verticalSpace(2),
+                  Row(
+                    children: [
+                      Text(
+                        hotelData?.rooms?.integerValue ?? '30',
+                        style: Theme.of(context)
+                            .textTheme
+                            .labelMedium!
+                            .copyWith(
+                                fontSize: 12.sp,
+                                color: ColorsManager.darkGray
+                                    .withValues(alpha: 0.6)),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      horizontalSpace(5),
+                      Text(
+                        'rooms',
+                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                            color:
+                                ColorsManager.darkGray.withValues(alpha: 0.4)),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ],
+                  ),
+                  verticalSpace(2),
                   Row(
                     children: [
                       Text(

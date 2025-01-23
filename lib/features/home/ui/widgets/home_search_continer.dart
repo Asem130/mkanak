@@ -25,16 +25,16 @@ class HomeSearchContiner extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         child: Row(
           children: [
-            Text('Search for hotel',
-                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color: ColorsManager.darkGray,
-                    )),
-            horizontalSpace(12),
             Icon(
               FontAwesomeIcons.magnifyingGlass,
               size: 15,
               color: ColorsManager.darkGray.withValues(alpha: .8),
             ),
+            horizontalSpace(12),
+            Text('Search for hotel',
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      color: ColorsManager.darkGray,
+                    )),
           ],
         ),
       ),

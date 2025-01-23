@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mkanak/core/di/depandency_injection.dart';
 import 'package:mkanak/core/routes/routes.dart';
+import 'package:mkanak/features/home/data/models/hotels/hotels_response_model.dart';
 import 'package:mkanak/features/home/home_screen.dart';
 import 'package:mkanak/features/home/logic/home_cubit.dart';
 import 'package:mkanak/features/home/ui/widgets/home_search_screen.dart';
+import 'package:mkanak/features/hotel/ui/hotel_screen.dart';
 import 'package:mkanak/features/login/logic/cubit/login_cubit.dart';
 import 'package:mkanak/features/login/login_screen.dart';
 import 'package:mkanak/features/onboarding/onboarding_screen.dart';
@@ -44,6 +46,13 @@ class AppRouter {
                   create: (context) => getIt<HomeCubit>(),
                   child: const HomeSearchScreen(),
                 ));
+      case Routes.hotelScreen:
+        if (arguments is List<HotelsDocuments?>?) {
+          return MaterialPageRoute(
+            builder: (_) => HotelScreen(args: arguments),
+          );
+        }
+        return MaterialPageRoute(builder: (_) => const HotelScreen());
 
       default:
         return null;

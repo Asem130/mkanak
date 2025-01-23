@@ -49,12 +49,20 @@ class HomeCubit extends Cubit<HomeState> {
     });
   }
 
+  // search for hotel
   void searchForHotel({required String name}) async {
     emit(const HomeState.searchedHotelsLoading());
     final response = await _homeRepoImpl.fetchSearchedHotels(name);
 
-    response.when(success: (SearchedHotelsResponseModelWrapper searchedHotelsResponseModelWrapper) {
-      emit(HomeState.searchedHotelsSuccses(searchedHotelsResponseModelWrapper.documents));
+    response.when(success: (SearchedHotelsResponseModelWrapper
+        searchedHotelsResponseModelWrapper) {
+      if (searchedHotelsResponseModelWrapper.documents![0].document == null) {
+        emit(const HomeState.searchedHotelsEmpty());
+        return;
+      } else {
+        emit(HomeState.searchedHotelsSuccses(
+            searchedHotelsResponseModelWrapper.documents));
+      }
     }, failure: (apiErrorModel) {
       emit(HomeState.searchedHotelsError(apiErrorModel));
     });

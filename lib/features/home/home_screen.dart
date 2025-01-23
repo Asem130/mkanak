@@ -22,8 +22,6 @@ class HomeScreen extends StatelessWidget {
           padding: EdgeInsets.only(left: 12.w, right: 18.w, bottom: 0.h),
           child: CustomScrollView(slivers: [
             HomeSliverAppBar(),
-            SliverToBoxAdapter(child: verticalSpace(10)),
-            
             HomeCarousalSliderBlocBuilder(),
             SliverToBoxAdapter(child: verticalSpace(10)),
             MostPopularRow(),

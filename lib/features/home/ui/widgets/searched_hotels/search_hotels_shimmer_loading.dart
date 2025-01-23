@@ -10,13 +10,15 @@ class SearchHotelsShimmerLoading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 200.h,
-      child: ListView.builder(
-        scrollDirection: Axis.vertical,
-        itemBuilder: (context, index) => Padding(
-          padding: const EdgeInsets.only(right: 8),
-          child: Column(
+    return ListView.builder(
+      scrollDirection: Axis.vertical,
+      itemCount:5,
+      itemBuilder: (context, index) {
+        return Padding(
+          padding: const EdgeInsets.only(top: 8.0),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Shimmer.fromColors(
                 baseColor: ColorsManager.primaryAccent.withValues(
@@ -24,8 +26,8 @@ class SearchHotelsShimmerLoading extends StatelessWidget {
                 ),
                 highlightColor: Colors.white,
                 child: Container(
-                  height: 75.h,
-                  width: 120.w,
+                  height: 80.h,
+                  width: 100.w,
                   decoration: BoxDecoration(
                     color: ColorsManager.white,
                     borderRadius: const BorderRadius.only(
@@ -34,28 +36,89 @@ class SearchHotelsShimmerLoading extends StatelessWidget {
                   ),
                 ),
               ),
-              verticalSpace(10),
-              Shimmer.fromColors(
-                baseColor: ColorsManager.primaryAccent.withValues(
-                  alpha: 0.1,
-                ),
-                highlightColor: Colors.white,
-                child: Container(
-                  height: 10.h,
-                  width: 40.w,
-                  decoration: BoxDecoration(
-                    color: ColorsManager.white,
-                    borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(8),
-                        topRight: Radius.circular(8)),
-                  ),
-                ),
-              ),
+              SizedBox(
+                  height: 80.h,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 8.h,
+                    ),
+                    child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Shimmer.fromColors(
+                            baseColor: ColorsManager.primaryAccent.withValues(
+                              alpha: 0.1,
+                            ),
+                            highlightColor: Colors.white,
+                            child: Container(
+                              height: 10.h,
+                              width: MediaQuery.of(context).size.width * 0.5,
+                              decoration: BoxDecoration(
+                                color: ColorsManager.white,
+                                borderRadius: const BorderRadius.only(
+                                    topLeft: Radius.circular(8),
+                                    topRight: Radius.circular(8)),
+                              ),
+                            ),
+                          ),
+                          verticalSpace(10),
+                          Shimmer.fromColors(
+                            baseColor: ColorsManager.primaryAccent.withValues(
+                              alpha: 0.1,
+                            ),
+                            highlightColor: Colors.white,
+                            child: Container(
+                              height: 10.h,
+                              width: 150.w,
+                              decoration: BoxDecoration(
+                                color: ColorsManager.white,
+                                borderRadius: const BorderRadius.only(
+                                    topLeft: Radius.circular(8),
+                                    topRight: Radius.circular(8)),
+                              ),
+                            ),
+                          ),
+                          verticalSpace(10),
+                          Shimmer.fromColors(
+                            baseColor: ColorsManager.primaryAccent.withValues(
+                              alpha: 0.1,
+                            ),
+                            highlightColor: Colors.white,
+                            child: Container(
+                              height: 10.h,
+                              width: 100.w,
+                              decoration: BoxDecoration(
+                                color: ColorsManager.white,
+                                borderRadius: const BorderRadius.only(
+                                    topLeft: Radius.circular(8),
+                                    topRight: Radius.circular(8)),
+                              ),
+                            ),
+                          ),
+                          verticalSpace(10),
+                          Shimmer.fromColors(
+                            baseColor: ColorsManager.primaryAccent.withValues(
+                              alpha: 0.1,
+                            ),
+                            highlightColor: Colors.white,
+                            child: Container(
+                              height: 10.h,
+                              width: 100.w,
+                              decoration: BoxDecoration(
+                                color: ColorsManager.white,
+                                borderRadius: const BorderRadius.only(
+                                    topLeft: Radius.circular(8),
+                                    topRight: Radius.circular(8)),
+                              ),
+                            ),
+                          ),
+                        ]),
+                  ))
             ],
           ),
-        ),
-        itemCount: 5,
-      ),
+        );
+      },
     );
   }
 }

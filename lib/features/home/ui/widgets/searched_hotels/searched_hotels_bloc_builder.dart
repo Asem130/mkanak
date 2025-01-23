@@ -1,6 +1,10 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lottie/lottie.dart';
+import 'package:mkanak/core/helpers/extensions.dart';
+import 'package:mkanak/core/helpers/space_vector.dart';
+import 'package:mkanak/core/routes/routes.dart';
 import 'package:mkanak/features/home/logic/home_cubit.dart';
 import 'package:mkanak/features/home/logic/home_state.dart';
 import 'package:mkanak/features/home/ui/widgets/searched_hotels/search_hotels_shimmer_loading.dart';
@@ -32,21 +36,25 @@ class SearchedHotelsBlocBuilder extends StatelessWidget {
 }
 
 Widget setupLoading() {
-  return const Center(
-    child: SearchHotelsShimmerLoading(),
-  );
+  return Expanded(child: SearchHotelsShimmerLoading());
 }
 
 setupSuccess(searchedDocumentsList) {
-  return SizedBox(
-    height: 200.h,
+  return Expanded(
     child: ListView.builder(
       scrollDirection: Axis.vertical,
       itemCount: searchedDocumentsList.length,
       itemBuilder: (context, index) {
-        return SearchedHotelItem(
-            hotelData:
-                searchedDocumentsList[index].document.hotelsData);
+        return Padding(
+          padding: const EdgeInsets.only(top: 8.0),
+          child: GestureDetector(
+            onTap: () {
+              context.pushNamed(Routes.hotelScreen);
+            },
+            child: SearchedHotelItem(
+                hotelData: searchedDocumentsList[index].document.hotelsData),
+          ),
+        );
       },
     ),
   );
@@ -59,7 +67,11 @@ setupError() {
 }
 
 Widget setupEmpty() {
-  return const Center(
-    child: Text('No Hotels Found'),
+  return Column(
+    children: [
+      verticalSpace(150),
+      Text('No hotels found', style: TextStyle(fontSize: 20.sp)),
+      Lottie.asset('assets/images/no_data.json', width: 200.w, height: 200.h),
+    ],
   );
 }
