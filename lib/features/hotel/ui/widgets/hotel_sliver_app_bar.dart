@@ -6,7 +6,7 @@ import 'package:mkanak/features/hotel/ui/widgets/hotel_app_bar_carousal_slider.d
 
 class HotelSliverAppBar extends StatelessWidget {
   const HotelSliverAppBar({super.key, required this.hotelData});
-  final List<HotelsDocuments?>? hotelData;
+  final HotelsData? hotelData;
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
@@ -20,11 +20,9 @@ class HotelSliverAppBar extends StatelessWidget {
       flexibleSpace: FlexibleSpaceBar(
         titlePadding: EdgeInsets.symmetric(vertical: 8.h),
         expandedTitleScale: 1.12,
-        background: Padding(
-            padding: EdgeInsets.only(bottom: 30.h),
-            child: HotelAppBarCarousalSlider(
-              documents: hotelData,
-            )),
+        background: HotelAppBarCarousalSlider(
+          hotelData: hotelData,
+        ),
         centerTitle: true,
         // title: HotelAppBarCarousalSlider(
         //   documents: hotelData,

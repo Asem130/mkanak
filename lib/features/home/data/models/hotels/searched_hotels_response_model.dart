@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:mkanak/features/home/data/models/hotels/hotels_response_model.dart';
 part 'searched_hotels_response_model.g.dart';
 
 @JsonSerializable()
@@ -49,8 +50,10 @@ class SearchedHotelsData {
   final Images? images;
   final Rooms? rooms;
   final PricePerDay? pricePerDay;
+  final Facalitis? facalitis;
 
   SearchedHotelsData({
+    this.facalitis,
     this.name,
     this.address,
     this.cityName,

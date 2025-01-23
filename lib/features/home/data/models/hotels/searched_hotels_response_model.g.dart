@@ -54,6 +54,9 @@ Map<String, dynamic> _$SearchedHotelsDocumentsToJson(
 
 SearchedHotelsData _$SearchedHotelsDataFromJson(Map<String, dynamic> json) =>
     SearchedHotelsData(
+      facalitis: json['facalitis'] == null
+          ? null
+          : Facalitis.fromJson(json['facalitis'] as Map<String, dynamic>),
       name: json['name'] == null
           ? null
           : Name.fromJson(json['name'] as Map<String, dynamic>),
@@ -90,6 +93,7 @@ Map<String, dynamic> _$SearchedHotelsDataToJson(SearchedHotelsData instance) =>
       'images': instance.images,
       'rooms': instance.rooms,
       'pricePerDay': instance.pricePerDay,
+      'facalitis': instance.facalitis,
     };
 
 Name _$NameFromJson(Map<String, dynamic> json) => Name(

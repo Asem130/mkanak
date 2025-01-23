@@ -1,52 +1,27 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:mkanak/core/widgets/crousal_slider.dart';
 import 'package:mkanak/features/home/data/models/hotels/hotels_response_model.dart';
 
 class HotelAppBarCarousalSlider extends StatelessWidget {
-  const HotelAppBarCarousalSlider({super.key, required this.documents});
-  final List<HotelsDocuments?>? documents;
+  const HotelAppBarCarousalSlider({super.key, required this.hotelData});
+  final HotelsData? hotelData;
   @override
   Widget build(BuildContext context) {
     return CustomCrouserSlider(
+      height: MediaQuery.of(context).size.height * 0.3,
       secondes: 10,
-      scrollDirection: Axis.vertical,
+      scrollDirection: Axis.horizontal,
       enlargeFactor: 0.3,
       viewportFraction: 1,
-      items: creatListOfHotelImages(),
+      items: hotelData!.images!.arrayValue!.values!
+          .map((e) => CachedNetworkImage(
+                imageUrl: e.stringValue!,
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height * 0.3,
+                fit: BoxFit.cover,
+              ))
+          .toList(),
     );
-  }
-
-  List<Widget> creatListOfHotelImages() {
-    final hotelImages = <Widget>[];
-
-    for (final element in documents!) {
-      final images = element?.hotelsData?.images?.arrayValue?.values;
-
-      if (images != null && images.isNotEmpty) {
-        for (final image in images) {
-          final imageUrl = image.stringValue;
-          if (imageUrl != null && imageUrl.isNotEmpty) {
-            hotelImages.add(
-              Stack(
-                alignment: Alignment.center,
-                children: [
-                  // Display each image
-                  Image.network(
-                    imageUrl,
-                    width: double.infinity,
-                    height: double.infinity,
-                    fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) =>
-                        const Icon(Icons.broken_image, size: 100),
-                  ),
-                  // Title overlay
-                ],
-              ),
-            );
-          }
-        }
-      }
-    }
-    return hotelImages;
   }
 }

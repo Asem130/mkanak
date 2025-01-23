@@ -47,13 +47,12 @@ class AppRouter {
                   child: const HomeSearchScreen(),
                 ));
       case Routes.hotelScreen:
-        if (arguments is List<HotelsDocuments?>?) {
+        if (arguments is HotelsData) {
           return MaterialPageRoute(
-            builder: (_) => HotelScreen(args: arguments),
+            builder: (_) => HotelScreen(hotelsData: arguments),
           );
         }
-        return MaterialPageRoute(builder: (_) => const HotelScreen());
-
+        return null;
       default:
         return null;
     }

@@ -32,9 +32,10 @@ class HotelsData {
   final ProfileImage? profileImage;
   final Images? images;
   final Discription? description;
-
+  final Facalitis? facalitis;
   HotelsData(
-      {this.address,
+      {this.facalitis,
+      this.address,
       this.cityName,
       this.name,
       this.pricePerDay,
@@ -152,5 +153,78 @@ class Values {
   Values({this.stringValue});
   factory Values.fromJson(json) {
     return _$ValuesFromJson(json);
+  }
+}
+
+@JsonSerializable()
+class Facalitis {
+  Facalitis({
+    this.facalitisArrayValue,
+  });
+  @JsonKey(name: 'arrayValue')
+  final FacalitisArrayValue? facalitisArrayValue;
+
+  factory Facalitis.fromJson(Map<String, dynamic> json) =>
+      _$FacalitisFromJson(json);
+}
+
+@JsonSerializable()
+class FacalitisArrayValue {
+  FacalitisArrayValue({
+    required this.hotelFacalitisList,
+  });
+  @JsonKey(name: 'values')
+  final List<Value>? hotelFacalitisList;
+
+  factory FacalitisArrayValue.fromJson(Map<String, dynamic> json) =>
+      _$FacalitisArrayValueFromJson(json);
+}
+
+@JsonSerializable()
+class Value {
+  Value({
+    required this.mapValue,
+  });
+
+  final MapValue? mapValue;
+
+  factory Value.fromJson(Map<String, dynamic> json) => _$ValueFromJson(json);
+}
+
+@JsonSerializable()
+class MapValue {
+  MapValue({
+    required this.hotelFacalitisData,
+  });
+  @JsonKey(name: 'fields')
+  final HotelFacalitisData? hotelFacalitisData;
+
+  factory MapValue.fromJson(Map<String, dynamic> json) =>
+      _$MapValueFromJson(json);
+}
+
+@JsonSerializable()
+class HotelFacalitisData {
+  HotelFacalitisData({
+    required this.name,
+    required this.image,
+    required this.number,
+  });
+
+  final Name? name;
+  final ProfileImage? image;
+  final Number? number;
+
+  factory HotelFacalitisData.fromJson(Map<String, dynamic> json) =>
+      _$HotelFacalitisDataFromJson(json);
+}
+
+@JsonSerializable()
+class Number {
+  String? stringValue;
+
+  Number(this.stringValue);
+  factory Number.fromJson(json) {
+    return _$NumberFromJson(json);
   }
 }

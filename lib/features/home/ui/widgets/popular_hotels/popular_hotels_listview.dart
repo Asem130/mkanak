@@ -19,7 +19,8 @@ class PopularHotelsListView extends StatelessWidget {
           padding: const EdgeInsets.only(right: 8),
           child: GestureDetector(
             onTap: () {
-              context.pushNamed(Routes.hotelScreen, arguments: documentsList);
+              context.pushNamed(Routes.hotelScreen,
+                  arguments: documentsList![index]!.hotelsData);
             },
             child: PopularHotelItem(
               hotelData: documentsList?[index]?.hotelsData,

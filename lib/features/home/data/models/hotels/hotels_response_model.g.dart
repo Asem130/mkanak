@@ -30,6 +30,9 @@ Map<String, dynamic> _$HotelsDocumentsToJson(HotelsDocuments instance) =>
     };
 
 HotelsData _$HotelsDataFromJson(Map<String, dynamic> json) => HotelsData(
+      facalitis: json['facalitis'] == null
+          ? null
+          : Facalitis.fromJson(json['facalitis'] as Map<String, dynamic>),
       address:
           json['address'] == null ? null : Address.fromJson(json['address']),
       cityName:
@@ -61,6 +64,7 @@ Map<String, dynamic> _$HotelsDataToJson(HotelsData instance) =>
       'profileImage': instance.profileImage,
       'images': instance.images,
       'description': instance.description,
+      'facalitis': instance.facalitis,
     };
 
 Address _$AddressFromJson(Map<String, dynamic> json) => Address(
@@ -154,5 +158,72 @@ Values _$ValuesFromJson(Map<String, dynamic> json) => Values(
     );
 
 Map<String, dynamic> _$ValuesToJson(Values instance) => <String, dynamic>{
+      'stringValue': instance.stringValue,
+    };
+
+Facalitis _$FacalitisFromJson(Map<String, dynamic> json) => Facalitis(
+      facalitisArrayValue: json['arrayValue'] == null
+          ? null
+          : FacalitisArrayValue.fromJson(
+              json['arrayValue'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$FacalitisToJson(Facalitis instance) => <String, dynamic>{
+      'arrayValue': instance.facalitisArrayValue,
+    };
+
+FacalitisArrayValue _$FacalitisArrayValueFromJson(Map<String, dynamic> json) =>
+    FacalitisArrayValue(
+      hotelFacalitisList: (json['values'] as List<dynamic>?)
+          ?.map((e) => Value.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$FacalitisArrayValueToJson(
+        FacalitisArrayValue instance) =>
+    <String, dynamic>{
+      'values': instance.hotelFacalitisList,
+    };
+
+Value _$ValueFromJson(Map<String, dynamic> json) => Value(
+      mapValue: json['mapValue'] == null
+          ? null
+          : MapValue.fromJson(json['mapValue'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$ValueToJson(Value instance) => <String, dynamic>{
+      'mapValue': instance.mapValue,
+    };
+
+MapValue _$MapValueFromJson(Map<String, dynamic> json) => MapValue(
+      hotelFacalitisData: json['fields'] == null
+          ? null
+          : HotelFacalitisData.fromJson(json['fields'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$MapValueToJson(MapValue instance) => <String, dynamic>{
+      'fields': instance.hotelFacalitisData,
+    };
+
+HotelFacalitisData _$HotelFacalitisDataFromJson(Map<String, dynamic> json) =>
+    HotelFacalitisData(
+      name: json['name'] == null ? null : Name.fromJson(json['name']),
+      image:
+          json['image'] == null ? null : ProfileImage.fromJson(json['image']),
+      number: json['number'] == null ? null : Number.fromJson(json['number']),
+    );
+
+Map<String, dynamic> _$HotelFacalitisDataToJson(HotelFacalitisData instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'image': instance.image,
+      'number': instance.number,
+    };
+
+Number _$NumberFromJson(Map<String, dynamic> json) => Number(
+      json['stringValue'] as String?,
+    );
+
+Map<String, dynamic> _$NumberToJson(Number instance) => <String, dynamic>{
       'stringValue': instance.stringValue,
     };
